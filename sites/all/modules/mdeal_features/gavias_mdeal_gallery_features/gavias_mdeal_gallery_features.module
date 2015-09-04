@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Gavias MDEAL Gallery features feature.
+ */
+
+include_once 'gavias_mdeal_gallery_features.features.inc';

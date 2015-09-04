@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Gavias MDEAL Team Features feature.
+ */
+
+include_once 'gavias_mdeal_team_features.features.inc';
