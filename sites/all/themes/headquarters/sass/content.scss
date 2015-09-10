@@ -396,7 +396,20 @@ table {
   background: $theme-color none repeat scroll 0 0;
 }
 
+.nav .open > a {
+    &,
+    &:hover,
+    &:focus {
+        border-color: transparent;
+    }
+}
 
+.nav-tabs > li > a {
+    &:hover, 
+    &:focus {
+        color: $theme-color;
+    }
+}
 
 .portfolio-filter .nav-tabs > li > a {
   &:hover, 
