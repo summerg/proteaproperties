@@ -411,6 +411,17 @@ table {
     }
 }
 
+form[id^="user-"] {
+    padding-top:20px;
+    .form-item {
+        margin-top: 0 !important;
+        margin-bottom: 20px;
+        label {
+            margin-right: 5px;
+        }
+    }
+}
+
 .portfolio-filter .nav-tabs > li > a {
   &:hover, 
   &:focus, 
