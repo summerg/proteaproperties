@@ -67,10 +67,14 @@
   }
 }
 
-.social ul.connect li.social-instagram {
-  background-color: #125688;
+.social ul.connect li {
+    &.social-instagram {
+      background-color: #125688;
+    }
+    &.social-google-plus {
+        background-color: #D73D32;
+    }
 }
-
 .newsletter-signup {
   padding: 20px 0;
   margin:0;

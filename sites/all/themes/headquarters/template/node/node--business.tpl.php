@@ -58,8 +58,7 @@ $post_format = "none";
 
 
 <article id="node-<?php print $node->nid; ?>" class="node-teaser-display post-format-<?php echo $post_format ?> <?php print $classes; ?> post post-medium-image"<?php print $attributes; ?>>
-   <div class="post-block">
-    <div class="row row-post-single">
+        <div class="text-center">
           <?php if($post_format == 'gallery'){ ?>
              <?php if(render($content['field_post_gallery'])){ ?>
                 <div class="post-image post-gallery">
@@ -73,7 +72,7 @@ $post_format = "none";
           <?php }else{print render($content['field_business_image']);
           }
           ?>  
-
+        </div>
           <div class="post-content">
             <div class="row">
                 <div class="col-sm-8">
@@ -99,16 +98,21 @@ $post_format = "none";
                 
                 </div>
                 <div class="col-sm-4 contact-data">
-                  <?php print render($content['field_business_phone']); ?>
-                  <?php print render($content['field_business_suite']); ?>
-                  <?php print render($content['field_business_website']); ?>
+                    <?php print render($content['field_business_phone']); ?>
+                    <?php print render($content['field_business_suite']); ?>
+                    <?php print render($content['field_business_website']); ?>
+
+
+                    <?php
+                        $block = block_load('views', 'business_social-social_links');      
+                        $output = _block_get_renderable_array(_block_render_blocks(array($block)));        
+                        print drupal_render ($output); 
+                    ?>
                 </div>
             </div>
           
           </div>  
           
-      </div>      
-  </div>
   <div class="clearfix"></div>
 </article>
 

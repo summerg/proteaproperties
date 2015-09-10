@@ -21,9 +21,11 @@
  * regardless of any changes in the aliasing that might happen if
  * the view is modified.
  */
-
-print_R($row);
-$handle = ($row->field_field_instagram_handle[0]['raw']['value'] == "" ) ? "theheadquarters" : $row->field_field_instagram_handle[0]['raw']['value'];
+if (isset($row->field_field_instagram_handle[0]['raw']['value'])){
+	$handle = $row->field_field_instagram_handle[0]['raw']['value'];
+} else {
+	$handle = "theheadquarters" ;
+}
 ?>
 <div class="instagram-widget">
 	<div class="block-title">

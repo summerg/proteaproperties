@@ -70,11 +70,17 @@ table {
 .padding-top-35 {
   padding-top: 35px !important;
 }
+.padding-top-40 {
+  padding-top: 40px !important;
+}
 .padding-top-50 {
   padding-top: 50px !important;
 }
 .padding-bottom-25 {
   padding-bottom: 25px !important; 
+}
+.padding-bottom-40 {
+  padding-bottom: 40px !important;
 }
 .padding-bottom-55 {
   padding-bottom: 55px !important;
@@ -96,7 +102,10 @@ table {
 }
 .background-v2 {
   background: url(/sites/headquarters/files/bg-gallery.jpg) no-repeat center center $nocolor;
-  background-attachment: fixed !important;
+  background-size: cover;
+  @media screen and (-webkit-min-device-pixel-ratio:0) { 
+      background-attachment: inherit !important;
+    }
 }
 .background-v3 {
   background-color: #f5f5f5;
@@ -259,7 +268,8 @@ table {
   }
 }
 
-.block-no-title .block-title {
+.block-no-title > div > .block-title,
+.block-no-title > div > div > .block-title {
   display: none;
 }
 
@@ -280,9 +290,6 @@ table {
 }
 
 .block {
-  &.wide-title .block-title span {
-    letter-spacing: 2px;
-  }
   .block-title span::after {
     border-top: 1px solid $theme-color;
     border-bottom: 1px solid $theme-color;
@@ -389,6 +396,8 @@ table {
   background: $theme-color none repeat scroll 0 0;
 }
 
+
+
 .portfolio-filter .nav-tabs > li > a {
   &:hover, 
   &:focus, 
@@ -424,14 +433,21 @@ table {
     padding: 15px; 
     background: whitesmoke;
     border-bottom:none;
-    .field-name-field-business-phone,.field-name-field-business-suite  {
+    .views-field-body > div   {
         border-bottom: 1px solid darken(whitesmoke, 10%);
         margin-bottom: 6px;
         padding-bottom: 6px;
+        &:last-child {
+            border-bottom: 0;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
     }    
 }
 .contact-data {
-    .field-name-field-business-phone,.field-name-field-business-suite  {
+    .field-name-field-business-phone,
+    .field-name-field-business-suite,
+    .field-name-field-business-website  {
         border-bottom: 1px solid #eee;
         margin-bottom: 16px;
         padding-bottom: 16px;
@@ -624,7 +640,8 @@ ul.timeline li {
         .views-field-title {    
           font-size: $font-size-h4;
           font-weight: 700;
-          margin:0;        
+          margin: 0 0 5px;
+          line-height: 1.2;
         }   
         .views-field-view-node {
             font-size: $font-size-small + 1;
@@ -693,13 +710,20 @@ ul.timeline li {
     }
   }
 }
-.social ul.connect li i {
-    color: #fff;
-    font-size: 22px;
-    margin-right:0;
-}
-.social ul.connect li.social-instagram {
-    padding:5px 0 0 8px;
+.social ul {
+    &.connect li {
+      i {
+          color: #fff;
+          font-size: 22px;
+          margin-right:0;
+      }
+      &:social-instagram {
+        padding:5px 0 0 8px;
+      }
+    }
+    .business-social-links & {
+        padding: 0;
+    }
 }
 
 .sidebar-inner {
@@ -779,6 +803,25 @@ ul.timeline li {
         margin: 0;
     }
 }
+
+
+ul.widget-twitter {
+    padding: 0;
+    > li {
+        list-style: outside none none;
+        border-bottom: 1px solid #eeeeee;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        &:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+    }
+    img {
+        margin-top: 5px;
+    }
+}
+
 #mc_embed_signup {
     .btn-primary {
         background: none;

@@ -67,7 +67,7 @@ $post_format = "none";
 <?php if(!$teaser): //Display node blog single ?>
 
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> post post-large blog-single-post"<?php print $attributes; ?>>
-
+    <div class="text-center">
       <?php if($post_format == 'gallery'){ ?>
           <?php if(render($content['field_post_gallery'])){ ?>
             <div class="post-image post-gallery">
@@ -80,7 +80,7 @@ $post_format = "none";
           <?php }else{ print render($content['field_post_image']); } ?>
 
           <?php }else{ print render($content['field_post_image']); } ?>
-
+    </div>
 
 
 
