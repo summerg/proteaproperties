@@ -64,9 +64,9 @@ function widget_block_configure($delta = '') {
                 '#description' => t('Eg: eJF9BWQOPJB2SgTSvI3OqQq6OIFz51HNegxoHmw5TY'),
             );
 
-			
+
             break;
-			
+
 		case 'widget_flickr':
             $form['widget_flickr_id'] = array(
                 '#type' => 'textfield',
@@ -127,7 +127,7 @@ function widget_block_save($delta = '', $edit = array()) {
 			variable_set('google_plus', $edit['google_plus']);
 			break;
 		case 'widget_slideshow':
-			break;		
+			break;
     }
 }
 
@@ -172,8 +172,18 @@ function widget_block_view($delta = '') {
         case 'widget_twitter':
        		 	$user_name = variable_get('widget_twitter_username','envato');
        		 	$count = variable_get('widget_twitter_tweets_count',2);
-            	$block['title'] = widget_block_get_title($delta);
+            	           $block['title'] = widget_block_get_title($delta);
            		drupal_add_js(drupal_get_path('module','widget').'/js/twitter/twitter.js');
+
+                if (arg(0) == 'node' && is_numeric(arg(1))) {
+                  $nid = arg(1);
+                  if ($nid) {
+                    $node = node_load($nid);
+                    if (isset($node->field_twitter_handle['und'][0]['value'])) {
+                            $user_name = $node->field_twitter_handle['und'][0]['value'];
+                    }
+                  }
+                }
 
                 $url = 'statuses/user_timeline.json?screen_name='.$user_name.'&count='.$count ;
 				require_once("js/twitter/twitteroauth/twitteroauth/twitteroauth.php");
@@ -189,7 +199,7 @@ function widget_block_view($delta = '') {
                     'widget_twitter_username' => variable_get('widget_twitter_username', 'envato'),
                     'widget_twitter_tweets_count' => variable_get('widget_twitter_tweets_count', 2),
                 ),
-                '#list' =>  $tweets 
+                '#list' =>  $tweets
                  );
 
             break;
@@ -218,7 +228,7 @@ function widget_block_view($delta = '') {
 
 /**
  * Implementation of hook_theme()
- * 
+ *
  */
 function widget_theme($existing, $type, $theme, $path) {
     return array(
