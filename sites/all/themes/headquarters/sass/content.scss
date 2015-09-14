@@ -411,11 +411,12 @@ table {
     }
 }
 
-form[id^="user-"] {
+form[id^="user-"],
+form#contact-personal-form {
     padding-top:20px;
     .form-item {
         margin-top: 0 !important;
-        margin-bottom: 20px;
+        margin-bottom: 12.5px;
         label {
             margin-right: 5px;
         }
@@ -698,6 +699,9 @@ ul.timeline li {
     }
     .field-name-body {
         margin-top: 25px;
+    }
+    .date-display-range {
+        display: inline;
     }
 }
 
