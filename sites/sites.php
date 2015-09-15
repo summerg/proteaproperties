@@ -58,7 +58,9 @@
 $envs = array(
   'headquarters' => array(
     'mdeal.1011i.com',
-    'www.headquarters.com',
+    'www.theheadquarters.com',
+    'theheadquarters.com',
+    'staging.theheadquarters.com',
     'headquarters.1011i.com',
   ),
   'seaport' => array(
