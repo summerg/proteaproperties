@@ -305,6 +305,30 @@ table {
           overflow: hidden;
         }
     }
+    /*Change images for Mobile*/
+    @media (max-width: $screen-xs-max) {
+        .swiper-wrapper {
+            .swiper-slide:nth-of-type(1) .gavias-slider-image {
+                background-image: url(/sites/headquarters/files/mobile/Headquarters-2.jpg)!important
+            }    
+            .swiper-slide:nth-of-type(2) .gavias-slider-image {
+                background-image: url(/sites/headquarters/files/mobile/Headquarters-1.jpg)!important
+            }    
+            .swiper-slide:nth-of-type(3) .gavias-slider-image {
+                background-image: url(/sites/headquarters/files/mobile/Headquarters-3.jpg)!important
+            }    
+            .swiper-slide:nth-of-type(4) .gavias-slider-image {
+                background-image: url(/sites/headquarters/files/mobile/headquarters-5_0.jpg)!important
+            }    
+            .swiper-slide:nth-of-type(5) .gavias-slider-image {
+                background-image: url(/sites/headquarters/files/mobile/Headquarters-2.jpg)!important
+            }    
+            .swiper-slide:nth-of-type(6) .gavias-slider-image {
+                background-image: url(/sites/headquarters/files/mobile/Headquarters-1.jpg)!important
+            }    
+        }
+        
+      }
     @media (max-width: $screen-xs-max) {
       max-height:300px; 
       .tp-caption {
