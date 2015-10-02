@@ -3,7 +3,7 @@ Drupal.TBMegaMenu = Drupal.TBMegaMenu || {};
 (function ($) {
   Drupal.TBMegaMenu.oldWindowWidth = 0;
   Drupal.TBMegaMenu.displayedMenuMobile = false;
-  Drupal.TBMegaMenu.supportedScreens = [980];
+  Drupal.TBMegaMenu.supportedScreens = [992];
   Drupal.TBMegaMenu.menuResponsive = function () {
     var windowWidth = window.innerWidth ? window.innerWidth : $(window).width();
     var navCollapse = $('.tb-megamenu').children('.nav-collapse');
@@ -15,7 +15,7 @@ Drupal.TBMegaMenu = Drupal.TBMegaMenu || {};
         navCollapse.css({height: 0, overflow: 'hidden'});
       }
     } else {
-      // If width of window is greater than 980 (supported screen).
+      // If width of window is greater than 992 (supported screen).
       navCollapse.removeClass('collapse');
       if (navCollapse.height() <= 0) {
         navCollapse.css({height: 'auto', overflow: 'visible'});

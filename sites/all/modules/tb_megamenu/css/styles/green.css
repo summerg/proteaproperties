@@ -54,7 +54,7 @@
   border-bottom: 1px solid #eee;
 }
 
-@media (max-width: 979px) {
+@media (max-width: 991px) {
 .tb-megamenu.style-green .nav-collapse .nav > li > a:hover,
 .tb-megamenu.style-green .nav-collapse .nav > li > a:focus {
 	color: #abba64;

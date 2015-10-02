@@ -149,7 +149,7 @@
   border-top: 0;
 }
 
-@media (max-width: 979px) {
+@media (max-width: 991px) {
 .tb-megamenu.style-black {
   background-image: none;
   background-color: inherit;

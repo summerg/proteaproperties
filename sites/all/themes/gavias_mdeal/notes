@@ -1,119 +1,98 @@
-Megan
-
-Headquarters:
-  Shops / Restaurants will look like:
-    http://mdeal.1011i.com/blog-2
-      no tags
-      no date
-      no comments
-      Content: (*required)
-        image
-        title*
-        summary*
-          - link to extended summary
-        phone*?
-        fax
-        location
-        address
-        nearest parking
-        website
-
-
-Use feeds module to pull in data from old site
-
-map on directions not contact page
-
-Issues:
-  business pages:
-    sass
-    on resize responsive
-
-Summer Q's:
-  entertainment:
-    integrate calendar
-  business pages:
-    link addresses to google maps
-    make telephone #'s into links programmatically
-    make websites into links programmatically
-
-============================
-
-The Headquarters former navigation
- 
-Home
-Shop & Dine
-Services
-  Parking
-  Directions
-About
-  History
-  Heritage
-  Distinction
-Blog
-News
-Events Calendar
-Contact
- 
- 
-The Headquarters new navigation
- 
-Home
 Shops
 Restaurants
 Entertainment
+    Events Calendar
+    Attractions
+    Busker Festival
+        What's a Busker
+        This Year's Lineup
+        Past Performers
+        Directions & Parking
+        Perform at Festival
+        Buskers After Dark
+    Easter Bunny Photos
+    Surfin' Santa
+    Breakfast with Santa
+    San Diego Bay Parade of Lights
+    Traditional Santa Photos
 Directions
-Visitor Info
-  Visitor Info
-  History
-  Heritage
-  Distinction
-  Contact Us
+Visitors Info
+    Tourist Information
+    Group Tour Information
+    Hotels Near Seaport Village
+    Contact Us
+        Thank You
+        Privacy Policy
+        Site Map
+    Sustainability Efforts
 Blog
-  Blog
-  News
- 
- 
-The Headquarters Content
- 
-HOME
-  - Similar to current
-    - Large Hero Image(s)
-    - Intro Text
-    - Splitter - Shops / Businesses--
-    - News & Events
-    - Gallery
-    - Social Media Integrations
-    - Email Pop Up**
-SHOPS
-  - Card like display of all Shops
-    - Perhaps a blurb at the top
-    - All of the same content for each business as the former website.
-    - Arranged alphabetically
-RESTAURANTS
-  - Same as Shops
-ENTERTAINMENT
-  - Similar to current "Events Calendar" page
-    - Text Only
-DIRECTIONS
-  - A combination of current "Parking" and "Directions" pages.
-VISITOR INFO (no-link nav item with dropdown)
-  VISITOR INFO
-    - A combination of current "About" and "A-List Retail Climate".
-  About
-    - Combine current History, Heritage & Distinction
-  CONTACT US
-    - Similar to current "Contact" page
-      - Should probably ask client if they have anything else i.e.**
-BLOG (no-link nav item with dropdown)
-  BLOG
-    - Similar to current "Blog" page
-      - Images next to post summaries
-        - Should probably check in regarding she wants & needs**
-  NEWS
-    - Similar to current "News" page
-      - Images next to post summaries
 
-Notes:
-  Leasing Link in Footer (put all leasing info)
+======================
 
-  anchors attached to biz cards
+Shops
+Restaurants
+Entertainment
+    Events Calendar
+    Attractions
+      (one card page)
+    Signature Events
+      Busker Festival
+        (one accordion page)
+          What's a Busker
+          This Year's Lineup
+          Past Performers
+          Directions & Parking
+          Perform at Festival
+          Buskers After Dark
+      Easter Bunny Photos
+      Surfin' Santa
+      Breakfast with Santa
+      Traditional Santa Photos
+      San Diego Bay Parade of Lights
+Directions & Parking
+Visitors Info
+    Tourist Information
+    Group Tours
+    Hotels Nearby
+    Contact
+Blog
+
+===========================
+
+Things to import:
+    Businesses
+      - Shops
+        - sub-categories
+      - Restaurants
+        - sub-categories
+
+    Articles
+      - Blog Articles
+
+    Events
+      - Events
+
+    Attractions
+
+
+===========================
+
+
+tagged signature events
+  busker
+  march 5-6
+
+  easter
+  march 19th
+
+  2015 TRADITIONAL SANTA PHOTOGRAPHS
+  November 19, 11 am-5 pm
+
+  Surfin' Santa Arrival
+  November 28, 2015
+
+  Breakfast with santa
+  Dec 12th & 13th 2015
+
+  San Diego Bay Parade of Lights
+  December 13th & December 20th, 2015

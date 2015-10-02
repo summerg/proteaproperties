@@ -1,0 +1,181 @@
+#preheader {
+    background: $theme-color;
+    color: #fff;
+    line-height: 1;
+    margin:0;
+    padding: 6px 0;
+    text-align:center;
+    .h5 {
+        position:relative;
+        font-size:$font-size-small + 1;   
+        top:1px;    
+        margin:0;
+        color: #fff;
+        @media (max-width: $screen-md-max) {
+            display:block;
+            margin-bottom:5px;
+        }
+    }
+    .btn-default {
+        background-color: $theme-color;
+        color: #fff;
+        padding: 1px 10px;
+        border-color: rgba(255,255,255,0.1)
+        font-size: 11px; 
+        &:hover {
+            border-color: rgba(255,255,255,0.9)
+        }
+        &:hover, &:focus, &:active, &.active {
+            background-color: lighten($theme-color, 10%);
+            color: #fff;
+        }
+    } 
+}
+
+
+#header {
+  @media (min-width: $screen-md-min) {
+    min-height: 80px;
+  }
+  .header-main {
+    margin: auto;
+    max-width: 1200px;
+    .logo {
+      padding-top: 0;
+      @media (min-width: $screen-md-min) {
+        padding-top: 5px;
+      }
+    }
+    .area-main-menu {
+      padding-right: 15px;
+    }
+  }
+  &.gv-fixonscroll {
+    top: -100px; 
+    transition: all 0.2s ease;
+    &.gv-fixed {
+      position: fixed; 
+      top: 0; 
+      left: 0; 
+      width: 100%; 
+      min-height: 70px;
+      margin-top: -5px; 
+      z-index: 99; 
+      background-color: white;
+      box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.4);
+      .header-fixed .tb-megamenu .nav-collapse ul.nav > li > a {
+        color: $black;
+      }
+      .header-main .logo {
+        margin-bottom: 0;
+      }
+      .tb-megamenu .nav-collapse ul.nav > li {
+        padding: 30px 0 20px;
+      }
+    }
+  }
+  .tb-megamenu-subnav > li:last-child > a {
+    border-bottom: 0;
+  }
+}
+
+
+div.tb-megamenu {
+  .nav-collapse ul.nav > li {
+    &:last-child a {
+      border-right: 0 !important;
+    }
+    &.active,
+    &.open,
+    &:focus,
+    &:hover {
+      > a {
+        &,
+        &:focus,
+        &:active,
+        &:hover {
+          color: lighten($theme-color, 15%) !important;
+        }
+      }
+    }
+    ,
+    &.dropdown.open .active > a {
+      color: inherit !important;
+      &:focus,
+      &:active,
+      &:hover {
+        color: #2E69C9 !important;
+      }
+    }
+    a {
+      &:active,
+      &:focus,
+      &:hover {
+        color: #2E69C9 !important;
+      }
+    }
+    .dropdown-menu {
+      border-color: $theme-color;
+    }
+  }
+  .tb-megamenu-button {
+      margin: 42% 10px 5px 0;
+      padding: 7px 10px;
+  }
+  @media (max-width: $screen-md-max) {
+    .nav-collapse > ul.nav > li > a {
+      padding: 0 12px;
+    }
+  }
+    @media (max-width: $screen-sm-max) {
+    > .nav-collapse > ul.nav > li > a {
+      background: $theme-color-secondary none repeat scroll 0 center !important;
+      color: #000000 !important;
+    }
+  }
+}
+
+.tb-megamenu .nav-collapse {
+  min-width:250px;
+  right: 10px !important;
+}
+
+
+/* @media (max-width: 1000px) {
+  .tb-megamenu {
+      .navbar-header {
+        float: none;
+      }
+      .navbar-left,.navbar-right {
+        float: none !important;
+      }
+      .navbar-toggle {
+        display: block;
+      }
+      .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+      }
+      .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+      }
+      .navbar-collapse.collapse {
+        display: none!important;
+      }
+      .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+      }
+      .navbar-nav>li {
+        float: none;
+      }
+      .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      .collapse.in{
+        display:block !important;
+    }
+  }
+} */

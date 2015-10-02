@@ -16,7 +16,7 @@
     </div>
 <?php endif; ?> 
 
-   <header id="header" <?php if(theme_get_setting('sticky_menu') == 1){echo 'class="gv-fixonscroll"';} ?>>
+   <header id="header" class="gv-fixonscroll">
       <?php if (isset($page['branding'])) : ?>
          <?php print render($page['branding']); ?>
       <?php endif; ?>

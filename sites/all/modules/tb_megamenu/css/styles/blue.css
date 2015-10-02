@@ -65,7 +65,7 @@
   border-bottom: 1px solid #eee;
 }
 
-@media (max-width: 979px) {
+@media (max-width: 991px) {
   .tb-megamenu.style-blue  {
   background-color: inherit;
 }
