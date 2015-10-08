@@ -37,13 +37,15 @@
   ?>
 
 <?php else: ?>
-
-  <div class="block-title padding-top-40">
-    <h2><span>Latest News and Posts</span></h2>
-  </div>
-  <?php
-    $block = module_invoke('views', 'block_view', 'article-block_1');
-    print render($block);
-  ?>
-
+<?php
+/**
+*  <div class="block-title padding-top-40">
+*    <h2><span>Latest Posts</span></h2>
+*  </div>
+*  <?php
+*    $block = module_invoke('views', 'block_view', 'article-block_3');
+*    print render($block);
+*  ?>
+*/
+?>
 <?php endif; ?>

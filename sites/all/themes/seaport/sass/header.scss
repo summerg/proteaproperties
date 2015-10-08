@@ -32,7 +32,6 @@
     } 
 }
 
-
 #header {
   @media (min-width: $screen-md-min) {
     min-height: 80px;
@@ -54,24 +53,27 @@
     top: -100px; 
     transition: all 0.2s ease;
     &.gv-fixed {
-      position: fixed; 
-      top: 0; 
-      left: 0; 
-      width: 100%; 
-      min-height: 70px;
-      margin-top: -5px; 
-      z-index: 99; 
-      background-color: white;
-      box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.4);
-      .header-fixed .tb-megamenu .nav-collapse ul.nav > li > a {
+        position: fixed; 
+        top: 0; 
+        left: 0; 
+        width: 100%; 
+        min-height: 70px;
+        margin-top: -5px; 
+        z-index: 99; 
+        background-color: white;
+        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.4);
+        .header-fixed .tb-megamenu .nav-collapse ul.nav > li > a {
         color: $black;
-      }
-      .header-main .logo {
-        margin-bottom: 0;
-      }
-      .tb-megamenu .nav-collapse ul.nav > li {
-        padding: 30px 0 20px;
-      }
+        }
+        .header-main .logo {
+            margin-bottom: 0;
+        }
+        .tb-megamenu .nav-collapse ul.nav > li {
+            padding: 30px 0 20px;
+        }
+        @media (max-width: $screen-xs-max) {
+            position: static;
+        }
     }
   }
   .tb-megamenu-subnav > li:last-child > a {

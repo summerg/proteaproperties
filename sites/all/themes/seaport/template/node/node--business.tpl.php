@@ -6,10 +6,10 @@ $post_format = "none";
 
 
 
-<?php 
+<?php
   $category="";
   foreach ($content['field_business_tags']['#items'] as $bizTag){
-     $category .=  strtolower(preg_replace('/\s/', '', $bizTag['taxonomy_term']->name)) . " " ;
+     $category .=  strtolower(preg_replace('/[^a-z0-9.]+/i', '', $bizTag['taxonomy_term']->name)) . " " ;
   };
 ?>
 
@@ -37,7 +37,6 @@ $post_format = "none";
          <div class="views-field views-field-body">
             <?php print render($content['body']); ?>
             <?php print render($content['field_business_phone']); ?>
-            <?php print render($content['field_business_fax']); ?>
             <?php /*
             <?php print render($content['field_business_address']); ?>
             */ ?>
@@ -66,12 +65,12 @@ $post_format = "none";
                       <?php if (render($content['field_post_gallery'])) : ?>
                          <?php print render($content['field_post_gallery']); ?>
                       <?php endif; ?>
-                    </div>    
+                    </div>
                 </div>
-             <?php }else{ print render($content['field_business_image']); } ?>  
+             <?php }else{ print render($content['field_business_image']); } ?>
           <?php }else{print render($content['field_business_image']);
           }
-          ?>  
+          ?>
         </div>
           <div class="post-content">
             <div class="row">
@@ -87,32 +86,37 @@ $post_format = "none";
                         hide($content['field_post_gallery']);
                         hide($content['field_post_embed']);
                         hide($content['field_post_format']);
-                  
+
                         hide($content['field_business_phone']);
                         hide($content['field_business_suite']);
                         hide($content['field_business_website']);
-                  
+                        hide($content['field_business_nearest_parking']);
+                        hide($content['field_business_address']);
+                        hide($content['field_business_fax']);
                         print render($content);
                       ?>
                     </div>
-                
+
                 </div>
                 <div class="col-sm-4 contact-data">
                     <?php print render($content['field_business_phone']); ?>
+                    <?php print render($content['field_business_fax']); ?>
                     <?php print render($content['field_business_suite']); ?>
                     <?php print render($content['field_business_website']); ?>
+                    <?php print render($content['field_business_nearest_parking']); ?>
+                    <?php print render($content['field_business_address']); ?>
 
 
-                    <?php
-                        $block = block_load('views', 'business_social-social_links');      
-                        $output = _block_get_renderable_array(_block_render_blocks(array($block)));        
-                        print drupal_render ($output); 
-                    ?>
+                      <?php
+                          $block = block_load('views', 'business_social-social_links');
+                          $output = _block_get_renderable_array(_block_render_blocks(array($block)));
+                          print drupal_render ($output);
+                      ?>
                 </div>
             </div>
-          
-          </div>  
-          
+
+          </div>
+
   <div class="clearfix"></div>
 </article>
 

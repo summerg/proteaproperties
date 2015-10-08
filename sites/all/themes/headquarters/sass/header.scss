@@ -73,6 +73,9 @@
       .tb-megamenu .nav-collapse ul.nav > li {
         padding: 30px 0 20px;
       }
+      @media (max-width: $screen-xs-max) {
+          position: static;
+      }
     }
   }
   .tb-megamenu-subnav > li:last-child > a {

@@ -24,7 +24,7 @@
 if (isset($row->field_field_instagram_handle[0]['raw']['value'])){
 	$handle = $row->field_field_instagram_handle[0]['raw']['value'];
 } else {
-	$handle = "theheadquarters" ;
+	$handle = "seaport_village" ;
 }
 ?>
 <div class="instagram-widget">

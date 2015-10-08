@@ -3,16 +3,16 @@
     <div class="post-home">
         <!--<div class="entry-thumbnail text-center">[field_post_image] </div>-->
         <div class="meta">
-<?php foreach ($fields as $id => $field): ?>
-  <?php if (!empty($field->separator)): ?>
-    <?php print $field->separator; ?>
-  <?php endif; ?>
+          <?php foreach ($fields as $id => $field): ?>
+            <?php if (!empty($field->separator)): ?>
+              <?php print $field->separator; ?>
+            <?php endif; ?>
 
-  <?php print $field->wrapper_prefix; ?>
-    <?php print $field->label_html; ?>
-    <?php print $field->content; ?>
-  <?php print $field->wrapper_suffix; ?>
-<?php endforeach; ?>
+            <?php print $field->wrapper_prefix; ?>
+              <?php print $field->label_html; ?>
+              <?php print $field->content; ?>
+            <?php print $field->wrapper_suffix; ?>
+          <?php endforeach; ?>
          </div>
     </div>
   </div>

@@ -6,7 +6,7 @@
 ?>
 <div class="gavias-main-page">
    
-   <?php require(drupal_get_path('theme', 'headquarters') . '/template/page/header.tpl.php'); ?>
+   <?php require(drupal_get_path('theme', 'seaport') . '/template/page/header.tpl.php'); ?>
 
   <div role="main" class="main main-page">
     <?php if (!drupal_is_front_page()): ?>

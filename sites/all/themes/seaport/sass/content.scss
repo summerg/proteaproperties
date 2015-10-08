@@ -62,11 +62,6 @@ table {
     text-decoration: none;
 }
 
-
-.padding-tb-45 {
-  padding-bottom: 45px !important;
-  padding-top: 45px !important;
-}
 .padding-top-35 {
   padding-top: 35px !important;
 }
@@ -85,7 +80,18 @@ table {
 .padding-bottom-55 {
   padding-bottom: 55px !important;
 }
-
+.padding-tb-15 {
+    padding-bottom: 15px !important;
+    padding-top: 15px !important;
+}
+.padding-tb-45 {
+  padding-bottom: 45px !important;
+  padding-top: 45px !important;
+}
+.padding-lr-30 {
+      padding-left: 30px !important;
+      padding-right: 30px !important;
+}
 
 .padding-v1 {
   @extend .padding-top-35;
@@ -118,6 +124,12 @@ table {
   .breadcrumb > li + li::before {
     color: #8d8d8d;
   }
+}
+
+.pdf-icon-inline {
+    display: inline-block;
+    font-size: 21px;
+    margin-right: 5px;
 }
 
 .nowrap {
@@ -199,6 +211,41 @@ table {
     text-decoration: none;
     color: $theme-color;
   }
+}
+
+
+.busker-form {
+    input[type="submit"] {
+        margin-top: 10px;
+    }
+    input[type="checkbox"] {
+        vertical-align: top;
+    }
+}
+.busker-menu > .block-inner > .block-content {
+    padding: 15px 15px 10px;
+    &,
+    & .block {
+        @extend .background-v1;
+    }
+    ul.menu {
+        margin-top: 5px;
+    }
+}
+
+
+.isotope-items .views-field-performer {
+    .grid-inner {
+        padding-bottom: 0;
+    }
+    .views-field-performer-image {
+        width: 100%;
+        margin: 0 0 10px;
+        @media (min-width: $screen-sm-min) {
+            margin: 0 10px 5px 0;
+            width: 130px;
+        }
+    }
 }
 
 .main-content {
@@ -304,27 +351,30 @@ table {
         .slider-content {
           overflow: hidden;
         }
+        .swiper-slide:nth-of-type(2) .gavias-slider-image {
+            background-position: right;
+        }   
     }
     /*Change images for Mobile*/
     @media (max-width: $screen-xs-max) {
         .swiper-wrapper {
             .swiper-slide:nth-of-type(1) .gavias-slider-image {
-                background-image: url(/sites/seaport/files/mobile/seaport-2.jpg)!important
+                background-image: url(/sites/seaport/files/mobile/attraction-s.jpg) !important;
             }    
             .swiper-slide:nth-of-type(2) .gavias-slider-image {
-                background-image: url(/sites/seaport/files/mobile/seaport-1.jpg)!important
+                background-image: url(/sites/seaport/files/mobile/shop-s.jpg) !important;
             }    
             .swiper-slide:nth-of-type(3) .gavias-slider-image {
-                background-image: url(/sites/seaport/files/mobile/seaport-3.jpg)!important
+                background-image: url(/sites/seaport/files/mobile/dine-s.jpg) !important;
             }    
             .swiper-slide:nth-of-type(4) .gavias-slider-image {
-                background-image: url(/sites/seaport/files/mobile/seaport-5_0.jpg)!important
+                background-image: url(/sites/seaport/files/mobile/claus-s.jpg) !important;
             }    
             .swiper-slide:nth-of-type(5) .gavias-slider-image {
-                background-image: url(/sites/seaport/files/mobile/seaport-2.jpg)!important
+                background-image: url(/sites/seaport/files/mobile/attraction-s.jpg) !important;
             }    
             .swiper-slide:nth-of-type(6) .gavias-slider-image {
-                background-image: url(/sites/seaport/files/mobile/seaport-1.jpg)!important
+                background-image: url(/sites/seaport/files/mobile/shop-s.jpg) !important;
             }    
         }
         
@@ -447,14 +497,24 @@ form#contact-personal-form {
     }
 }
 
-.portfolio-filter .nav-tabs > li > a {
-  &:hover, 
-  &:focus, 
-  &:active,
-  &.active {
-    background: $theme-color none repeat scroll 0 0 !important;
-    box-shadow: 0;
-  }
+.portfolio-filter ul.nav-tabs {
+    display: inline-block !important;
+    width: auto;
+    > li {
+        display: inline-block;
+        float: none;
+        margin-bottom: 3px;
+        > a {
+            margin: 0 !important;
+            &:hover, 
+            &:focus, 
+            &:active,
+            &.active {
+            background: $theme-color none repeat scroll 0 0 !important;
+            box-shadow: 0;
+            }
+        }
+    }
 }
 
 .isotope-items .grid-inner {
@@ -493,13 +553,26 @@ form#contact-personal-form {
         }
     }    
 }
+
+.node-business.node-teaser-display {
+    .field-name-body {
+        margin-bottom: 12.5px;
+    }
+}
 .contact-data {
     .field-name-field-business-phone,
     .field-name-field-business-suite,
-    .field-name-field-business-website  {
+    .field-name-field-business-website,
+    .field-name-field-business-nearest-parking,
+    .field-name-field-business-fax,  
+    .field-name-field-business-address {
         border-bottom: 1px solid #eee;
         margin-bottom: 16px;
         padding-bottom: 16px;
+        &:nth-last-child(2) {
+            border-bottom: 0;
+            margin-bottom: 0;
+        }
     } 
 }
 .isotope-items .grid-inner {
@@ -626,6 +699,27 @@ form#contact-personal-form {
 .btn-slide-outline {
   background-color: rgba(0, 0, 0, 0.75);
 }
+
+
+ul.nav li a{
+    &:after {
+        left: 6px;
+    }
+    &.active {
+        background-color: #eeeeee;
+        color: $theme-color;
+        .footer & {
+            background-color: #BBE6FA;
+        }
+    }
+}
+ul.menu > li a {
+    padding-left: 20px;
+    &:hover {
+        padding-left: 27px;
+    }
+}
+
 
 ul.timeline li {
   float: left;

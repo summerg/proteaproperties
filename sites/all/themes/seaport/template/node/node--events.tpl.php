@@ -52,17 +52,25 @@ $post_format = "none";
                   hide($content['field_post_gallery']);
                   hide($content['field_post_embed']);
                   hide($content['field_post_format']);
+                  hide($content['field_event_type']);
                   hide($content);
                 ?>
 
-                <?php if(!$field_event_type == 'signature'): ?>
+                <?php if(isset($content['field_event_type']['#items']['0']['taxonomy_term'])): ?>
+                  <?php
+                    $event_type = get_object_vars($content['field_event_type']['#items']['0']['taxonomy_term']);
+                  ?>
+                <?php endif; ?>
+
+                <?php if(!($event_type['name'] == 'Signature')): ?>
                   <?php print render($content['field_date']); ?>
                 <?php endif; ?>
+
 
                 <?php
                   print render($content['body']);
                   print render($content['field_article_tags']);
-                  print render($content['locations']);
+                  print render($content['field_location']);
                 ?>
               </div>
           </div>
@@ -131,16 +139,25 @@ $post_format = "none";
         hide($content['field_post_gallery']);
         hide($content['field_post_embed']);
         hide($content['field_post_format']);
+        hide($content['field_event_type']);
         hide($content);
       ?>
-      <?php if(!$field_event_type == 'signature'): ?>
+      
+      <?php if(isset($content['field_event_type']['#items']['0']['taxonomy_term'])): ?>
+        <?php
+          $event_type = get_object_vars($content['field_event_type']['#items']['0']['taxonomy_term']);
+        ?>
+      <?php endif; ?>
+
+      <?php if(!($event_type['name'] == 'Signature')): ?>
         <?php print render($content['field_date']); ?>
       <?php endif; ?>
 
+      
       <?php
         print render($content['body']);
         print render($content['field_article_tags']);
-        print render($content['locations']);
+        print render($content['field_location']);
       ?>
     </div>
 

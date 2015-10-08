@@ -23,3 +23,9 @@
   </article>
 
 <?php endif; ?>
+
+<?php if(!$teaser): //Display node blog single ?>
+
+  <?php print render($content); ?>
+
+<?php endif; ?>
