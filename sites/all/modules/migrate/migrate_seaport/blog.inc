@@ -16,7 +16,7 @@ abstract class SeaportMigration extends Migration {
 
     Database::addConnectionInfo('seaport', 'blog', array(
       'driver' => 'mysql',
-      'database' => 'seaport20151006',
+      'database' => 'seaport_old20151012',
       'username' => 'summer',
       'password' => 'w1nacka',
       'host' => 'localhost',
@@ -165,7 +165,7 @@ echo print_R($current_row->tags). "\n";
 }
 
 /*
-* END ARTICLES
+* START  ARTICLES
 */
 
 
@@ -191,17 +191,19 @@ class ArticleMigration extends SeaportMigration {
     $query -> join('a_page', 'p', 'b.page_id = p.id');
     $query -> join('a_area', 'a', 'a.page_id = p.id');
     $query -> join('a_area_version', 'v', 'v.area_id = a.id');
-    $query -> join('a_page_to_category', 'ptc', 'ptc.page_id = p.id');
-    $query -> join('a_category', 'c', 'ptc.category_id = c.id');
+    $query -> leftJoin('a_page_to_category', 'ptc', 'ptc.page_id = p.id');
+    $query -> leftJoin('a_category', 'c', 'ptc.category_id = c.id');
     $query -> fields('b', array( 'id', 'author_id','page_id', 'title', 'slug', 'published_at'));
     $query -> fields('v', array( "updated_at" ));
     $query -> fields('c', array( "name" ));
     $query->addField('v', 'id', 'version_id');
     $query->addField('c', 'slug', 'cat_slug');
     $query ->where('a.latest_version = v.version');
-    $query ->where('c.id in (1,2) ');
+//    $query ->where('c.id = 7 ');
     $query ->condition('a.name', 'blog-body');
-    //$query ->range(0,15);
+        $query ->condition('b.type', 'post');
+
+//    $query ->range(0,15);
 //echo $query;
 
     // Passing the cache_counts option means the source count (shown in
@@ -218,7 +220,6 @@ class ArticleMigration extends SeaportMigration {
     $this->addFieldMapping('title', 'title');
     $this->addFieldMapping('created', 'published_at');
     $this->addFieldMapping('changed', 'updated_at');
-    $this->addFieldMapping('field_article_type', 'name') ;
     $this->addFieldMapping('path', 'slug');
     $this->addFieldMapping('field_original_id', 'original_id');
     $this->addFieldMapping('body', 'newbody');
@@ -240,6 +241,14 @@ class ArticleMigration extends SeaportMigration {
     $this->addFieldMapping('field_article_tags:create_term')->defaultValue(true);
     $this->addFieldMapping('field_article_tags:ignore_case')->defaultValue(true);
 
+    $this->addFieldMapping('field_article_type', 'type') ;
+    $this->addFieldMapping('field_article_type:create_term')->defaultValue(true);
+    $this->addFieldMapping('field_article_type:ignore_case')->defaultValue(true);
+
+    $this->addFieldMapping('field_article_category', 'name') ;
+    $this->addFieldMapping('field_article_category:create_term')->defaultValue(true);
+    $this->addFieldMapping('field_article_category:ignore_case')->defaultValue(true);
+
 
     // $this->addFieldMapping('body:summary', 'extract');
 
@@ -258,10 +267,16 @@ class ArticleMigration extends SeaportMigration {
   }
 
 public function prepareRow($current_row) {
-      $published = strtotime($current_row->published_at);
-      $current_row->slug = $current_row->cat_slug . "/". date("Y/m/d", $published) . "/" .$current_row->slug;
-      $current_row->original_id = $current_row->id;
+      $current_row->type = "Blog";
+      $current_row->title = html_entity_decode($current_row->title);
+      $current_row->title = str_replace("&rsquo;", "'", $current_row->title);
+      $current_row->title = str_replace("&rdquo;", "\"", $current_row->title);
+      $current_row->title = str_replace("&ldquo;", "\"", $current_row->title);
 
+      $published = strtotime($current_row->published_at);
+      $current_row->slug ="blog/".  $current_row->slug;
+      $current_row->original_id = $current_row->id;
+      if ($current_row->updated_at  == "0000-00-00 00:00:00") unset($current_row->updated_at);
       $query = Database::getConnection('blog', 'seaport')
         -> select('a_area_version_slot', 'vs');
       $query -> join('a_slot', 's', '  slot_id  = s.id');
@@ -364,16 +379,16 @@ class EventsMigration extends SeaportMigration {
     $query -> join('a_page', 'p', 'b.page_id = p.id');
     $query -> join('a_area', 'a', 'a.page_id = p.id');
     $query -> join('a_area_version', 'v', 'v.area_id = a.id');
-    $query -> join('a_page_to_category', 'ptc', 'ptc.page_id = p.id');
-    $query -> join('a_category', 'c', 'ptc.category_id = c.id');
+//    $query -> join('a_page_to_category', 'ptc', 'ptc.page_id = p.id');
+//    $query -> join('a_category', 'c', 'ptc.category_id = c.id');
     $query -> fields('b', array( 'id', 'author_id','page_id', 'title', 'slug', 'published_at',
         'start_date', 'start_time', 'end_date', 'end_time', 'location'));
     $query -> fields('v', array( "updated_at" ));
-    $query -> fields('c', array( "name" ));
+ //   $query -> fields('c', array( "name" ));
     $query->addField('v', 'id', 'version_id');
-    $query->addField('c', 'slug', 'cat_slug');
+  //  $query->addField('c', 'slug', 'cat_slug');
     $query ->where('a.latest_version = v.version');
-    $query ->where('c.id in (3) ');
+  //  $query ->where('c.id in (7) ');
     $query ->condition('a.name', 'blog-body');
     $query ->condition('b.type', 'event');
 
@@ -431,12 +446,17 @@ echo $query;
   }
 
 public function prepareRow($current_row) {
+
+      $current_row->title = html_entity_decode($current_row->title);
+      $current_row->title = str_replace("&rsquo;", "'", $current_row->title);
+      $current_row->title = str_replace("&rdquo;", "\"", $current_row->title);
+      $current_row->title = str_replace("&ldquo;", "\"", $current_row->title);
+
       $current_row->original_id = $current_row->id;
       $published = strtotime($current_row->published_at);
-      $current_row->newslug =  "events-calendar/". date("Y/m/d", $published) . "/" .$current_row->slug;
+      $current_row->newslug =  "entertainment/events/". date("Y/m/d", $published) . "/" .$current_row->slug;
      // echo "\n\n".$current_row->newslug;
-
-
+      if ($current_row->updated_at  == "0000-00-00 00:00:00") unset($current_row->updated_at);
 
 
 $original_datetime = $current_row->start_date . " " . $current_row->start_time;

@@ -9,7 +9,7 @@ $post_format = "none";
 <?php
   $category="";
   foreach ($content['field_business_tags']['#items'] as $bizTag){
-     $category .=  strtolower(preg_replace('/[^a-z0-9.]+/i', '', $bizTag['taxonomy_term']->name)) . " " ;
+     $category .=   preg_replace('/[^a-z]/', '', str_replace("&amp;", "", strtolower(strip_tags($bizTag['taxonomy_term']->name))) ). " " ;
   };
 ?>
 

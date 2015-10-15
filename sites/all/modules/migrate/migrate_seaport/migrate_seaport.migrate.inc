@@ -24,9 +24,9 @@ function migrate_seaport_migrate_api() {
     ),
     'migrations' => array(
 
-      // 'Article' => array( 'class_name' => 'ArticleMigration' , 'group_name' => 'seaport', ),
+      'Article' => array( 'class_name' => 'ArticleMigration' , 'group_name' => 'seaport', ),
       // 'News' => array( 'class_name' => 'NewsMigration' , 'group_name' => 'seaport', ),
-      // 'Events' => array( 'class_name' => 'EventsMigration' , 'group_name' => 'seaport', ),
+      'Events' => array( 'class_name' => 'EventsMigration' , 'group_name' => 'seaport', ),
       'Businesses' => array(  'class_name' => 'BusinessMigration' , 'group_name' => 'seaport', ),
 
 

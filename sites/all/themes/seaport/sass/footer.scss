@@ -43,18 +43,21 @@
     }
     ul.nav {
         padding: 0;
-        li a {
-            font-family: brandon;
-            font-size: 14px;
-            font-weight: 700;
-            margin: 0;
-            text-transform: uppercase;
-            padding-top: 6px;
-            padding-bottom: 6px;
-            text-decoration: none;
-            &:after {
-                color: #1d3d70;
-                left: 6px;
+        li { 
+            padding: 2px 0;
+            a {
+                font-family: brandon;
+                font-size: 14px;
+                font-weight: 700;
+                margin: 0;
+                text-transform: uppercase;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                text-decoration: none;
+                &:after {
+                    color: #1d3d70;
+                    left: 6px;
+                }
             }
         }
     }
@@ -74,12 +77,12 @@
       color: #000;
       border: 0;
       .business-links {
-        display: inline-block;
-        position: relative;
-        top: -1px;
-        font-size: 10px;
-        white-space: nowrap;
         a {
+            display: inline-block;
+            position: relative;
+            top: -1px;
+            font-size: 10px;
+            white-space: nowrap;
             font-size: 10px;
             text-transform: uppercase;
         }
