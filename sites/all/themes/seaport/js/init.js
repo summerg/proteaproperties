@@ -22,4 +22,6 @@ jQuery(document).ready(function($){
       });
     });
 
+    $('header [title]').removeAttr('title');
+
 });

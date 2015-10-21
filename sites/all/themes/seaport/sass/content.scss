@@ -1137,22 +1137,25 @@ ul.widget-twitter {
 
 
 .btn-hero-outline {
-    backface-visibility: hidden;
-    border: 2px solid rgb(255, 255, 255);
-    color: rgb(255, 255, 255);
-    cursor: pointer;
-    display: inline-block;
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin-right: 10px;
-    padding: 10px 20px;
-    position: relative;
-    text-align: center;
-    text-transform: uppercase;
-    transition: all 0.35s ease 0s;
-    -webkit-transition: all 0.35s ease 0s;
-    background-color: rgba(0, 0, 0, 0.75);
+    &, 
+    &:focus {
+        backface-visibility: hidden;
+        border: 2px solid rgb(255, 255, 255);
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin-right: 10px;
+        padding: 10px 20px;
+        position: relative;
+        text-align: center;
+        text-transform: uppercase;
+        transition: all 0.35s ease 0s;
+        -webkit-transition: all 0.35s ease 0s;
+        background-color: rgba(0, 0, 0, 0.75);
+    }
     &:hover {
         background: rgb(255, 255, 255) none repeat scroll 0 0;
         border-color: rgb(255, 255, 255);
