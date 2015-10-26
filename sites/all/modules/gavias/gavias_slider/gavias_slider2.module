@@ -394,11 +394,11 @@ function gavias_slider_preprocess_slide(&$vars) {
         $wrapper = file_stream_wrapper_get_instance_by_uri($slide->background_image_uri);
        
         $path = base_path() .  $wrapper->getDirectoryPath() . "/" . file_uri_target($slide->background_image_uri);
-        $style[] = "background-image: url('{$path}');";
+        $style[] = "background-image: url('{$path}')";
     }
 
-    $style[] = 'background-color: #ccc;'; 
+    $style[] = 'background-color: #ccc'; 
     if($slide->background_image){
-        $vars['image'] = implode('', $style);
+        $vars['image'] = implode(';', $style);
     }
 }
