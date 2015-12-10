@@ -1,5 +1,5 @@
 <?php 
-   $category = strtolower(preg_replace('/\s/', '', $fields['field_business_tags']->content));
+   $category = html_entity_decode(strtolower(preg_replace('/\s/', '', $fields['field_business_tags']->content)));
 ?>
 
 <article class="col-lg-4 col-md-4 col-sm-4 margin-bottom-30 isotope-item <?php echo strip_tags(str_replace(',', ' ', $category)); ?> grid ">      

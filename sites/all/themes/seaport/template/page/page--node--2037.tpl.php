@@ -15,7 +15,7 @@
       <h2>Seaport Village</h2>
       <p class="caption hidden-xs"><span>The original, family-friendly waterfront destination for shopping and dining.</span></p>
       <div class="visit-button">
-        <a class="btn btn-hero-outline" href="/">Visit Seaport Village</a>
+        <a class="btn btn-hero-outline" href="/" onclick="ga('send', 'event', 'visit', 'seaport');">Visit Seaport Village</a>
       </div>
     </div>
   </section>
@@ -25,7 +25,7 @@
       <h2>The Headquarters</h2>
       <p class="caption hidden-xs"><span>A restored waterfront icon, now home to exclusive shops and restaurants.</span></p>
       <div class="visit-button">
-        <a class="btn btn-hero-outline" href="http://www.theheadquarters.com">Visit The Headquarters</a>
+        <a class="btn btn-hero-outline" href="http://www.theheadquarters.com" onclick="ga('send', 'event', 'visit', 'headquarters');">Visit The Headquarters</a>
       </div>
     </div>
   </section>

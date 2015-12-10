@@ -5,7 +5,6 @@ $post_format = "none";
 <?php if($teaser): ?>
 
 
-
 <?php
   $category="";
   foreach ($content['field_business_tags']['#items'] as $bizTag){

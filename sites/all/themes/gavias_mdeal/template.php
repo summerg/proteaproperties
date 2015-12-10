@@ -142,3 +142,4 @@ function gavias_mdeal_css_alter(&$css) {
     unset($css[drupal_get_path('module', 'user') . '/user.css']);
     // .. etc..
 }
+

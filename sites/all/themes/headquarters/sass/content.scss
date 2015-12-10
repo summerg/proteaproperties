@@ -73,6 +73,9 @@ table {
 .padding-top-50 {
   padding-top: 50px !important;
 }
+.padding-bottom-15 {
+  padding-bottom: 15px !important; 
+}
 .padding-bottom-25 {
   padding-bottom: 25px !important; 
 }
@@ -901,8 +904,34 @@ ul.widget-twitter {
     padding-bottom: 20px;
 }
 
-
-
+#comments {
+    #comment-form {
+        label {
+            font-size: 14px;
+            display: inline-block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            max-width: 100%;
+        }
+        input[type="text"] {
+            margin-bottom: 10px;
+            width: 100%;
+        }
+    }
+    h3::after {
+        background: #1d3d70 none repeat scroll 0 0;
+        height: 1px;
+    }
+    .submitted {
+        color: #888888;
+        font-size: 11px;
+    }
+}
+#comment-form {
+    fieldset.collapsed {
+        height: auto;
+    }
+}
 
 // ---------------------------------
 // REFERENCE ONLY
