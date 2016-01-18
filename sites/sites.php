@@ -66,6 +66,7 @@ $envs = array(
   'seaport' => array(
     'seaport2015.1011i.com',
     'www.seaport.com',
+    'www.seaportvillage.com',
   ),
 );
 
