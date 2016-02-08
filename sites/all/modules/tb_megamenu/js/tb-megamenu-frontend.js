@@ -57,11 +57,18 @@ Drupal.TBMegaMenu = Drupal.TBMegaMenu || {};
               clearTimeout ($this.data('animatingTimeout'));
               $this.data('animatingTimeout', setTimeout(function(){$this.removeClass ('animating')}, mm_timeout));
               clearTimeout ($this.data('hoverTimeout'));
-              $this.data('hoverTimeout', setTimeout(function(){$this.addClass ('open')}, 100));  
+              $this.data('hoverTimeout', setTimeout(function(){
+                $this.addClass ('open');
+                $this.children('a').attr('aria-expanded','true');
+              }, 100));  
             } else {
               clearTimeout ($this.data('hoverTimeout'));
               $this.data('hoverTimeout', 
-              setTimeout(function(){$this.addClass ('open')}, 100));
+              setTimeout(function(){
+                  $this.addClass ('open');
+                  $this.children('a').attr('aria-expanded','true');
+                }, 100)
+              );
             }
           },
           function(event) {
@@ -72,11 +79,17 @@ Drupal.TBMegaMenu = Drupal.TBMegaMenu || {};
               $this.data('animatingTimeout', 
               setTimeout(function(){$this.removeClass ('animating')}, mm_timeout));
               clearTimeout ($this.data('hoverTimeout'));
-              $this.data('hoverTimeout', setTimeout(function(){$this.removeClass ('open')}, 100));
+              $this.data('hoverTimeout', setTimeout(function(){
+                $this.removeClass ('open');
+                $this.children('a').attr('aria-expanded','false');
+              }, 100));
             } else {
               clearTimeout ($this.data('hoverTimeout'));
               $this.data('hoverTimeout', 
-              setTimeout(function(){$this.removeClass ('open')}, 100));
+              setTimeout(function(){
+                $this.removeClass ('open');
+                $this.children('a').attr('aria-expanded','false');
+              }, 100));
             }
           });
         });

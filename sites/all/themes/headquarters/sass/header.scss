@@ -144,6 +144,9 @@ div.tb-megamenu {
   right: 10px !important;
 }
 
+.tb-megamenu .mega.dropdown.openy > .mega-dropdown-menu {
+    display: block !important;
+}
 
 /* @media (max-width: 1000px) {
   .tb-megamenu {

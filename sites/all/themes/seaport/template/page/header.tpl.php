@@ -31,11 +31,11 @@
                <div class="row">
                   <div class="col-md-3 col-xs-10 pull-left">
                      <?php if ($logo): ?>
-                           <h1 class="logo">
+                           <div class="h1 logo">
                                  <a href="<?php print $front_page; ?>" rel="home" id="logo">
-                                       <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>"/>
+                                       <img src="<?php print $logo; ?>" alt="Seaport Village"/>
                                  </a>
-                           </h1>
+                           </div>
                      <?php endif; ?>
 
                      <?php if ($site_name || $site_slogan): ?>

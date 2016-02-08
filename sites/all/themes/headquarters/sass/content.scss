@@ -183,7 +183,8 @@ table {
     transition: all 0.35s ease 0s;
     background-color: rgba(0, 0, 0, 0.75);
     text-decoration: none;
-    &:hover {
+    &:hover,
+    &:focus {
       background: #ffffff none repeat scroll 0 0;
       border-color: #ffffff;
       color: #000000;
@@ -220,7 +221,7 @@ table {
       &:hover,
       &:focus {
         text-decoration: none;
-        color: inherit;
+        color: $theme-color;
       }
     }
   }
@@ -559,19 +560,23 @@ form#contact-personal-form {
       line-height: 18px;
       margin-right: 5px;
       margin-top: 2px;
-      padding: 0 5px;
       text-transform: capitalize;
+      background-color: transparent;
+      padding: 0;
+      display: block;
+      &:hover {
+        background-color: transparent;
+      }
       a {
+        padding: 3px 5px;
         text-decoration: none;
         color: $theme-color;
-      }
-      &:hover,
-      &:focus,
-      &:active {
-        background-color: $theme-color;
-        a {
-          text-decoration:none;
-          color: #fff;
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: $theme-color;
+            text-decoration:none;
+            color: #fff;
         }
       }
     }
@@ -591,29 +596,36 @@ form#contact-personal-form {
 }
 
 .list-tags .view-list ul > li {
-  border: 1px solid $theme-color;
-  font-size: 10px;
-  line-height: 18px;
-  margin: 5px 5px 0 0 !important;
-  text-transform: capitalize;
-  a {
-    text-decoration: none;
-    color: $theme-color;
-    padding: 0 5px;
-  }
-  &:hover,
-  &:focus,
-  &:active {
-    background-color: $theme-color;
-    a {
-      text-decoration:none;
-      color: #fff;
+    border: 1px solid $theme-color;
+    font-size: 10px;
+    line-height: 18px;
+    margin: 5px 5px 0 0 !important;
+    text-transform: capitalize;
+    &:hover {
+    background-color: transparent;
     }
-  }
+    a {
+        text-decoration: none;
+        color: $theme-color;
+        padding: 0 5px;
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: $theme-color;
+                text-decoration:none;
+                color: #fff;
+            }
+    }
 }
 
 .post-block .post-title a {
-  font-weight: 700;
+    font-weight: 700;
+    aside & {
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+    }
 }
 
 .gavias-slider {
