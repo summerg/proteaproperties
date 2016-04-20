@@ -59,11 +59,11 @@ CKEDITOR.editorConfig = function(config) {
     config.bodyClass = 'singlepage';
     config.bodyId = 'primary';
   }
-  /*
-   * Allow empty tags for icons - Cody
-   */
-  CKEDITOR.dtd.$removeEmpty.span = 0;
-  CKEDITOR.dtd.$removeEmpty.i = 0;
+
+  // Make CKEditor's edit area as high as the textarea would be.
+  if (this.element.$.rows > 0) {
+    config.height = this.element.$.rows * 20 + 'px';
+  }
 }
 
 /*
@@ -105,5 +105,3 @@ Drupal.settings.cke_toolbar_DrupalFull = [
   ['Maximize', 'ShowBlocks'],
   ['DrupalBreak', 'DrupalPageBreak']
 ];
-
-
