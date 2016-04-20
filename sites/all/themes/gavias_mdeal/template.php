@@ -101,6 +101,11 @@ function gavias_mdeal_process_html(&$vars) {
   $vars['head_scripts'] = drupal_get_js('head_scripts');
 }
 
+function gavias_mdeal_form_comment_form_alter(&$form, &$form_state) {
+    $form['author']['homepage']['#access'] = FALSE;
+}
+
+
 /**
  * Implements hook_preprocess_region().
  */ 

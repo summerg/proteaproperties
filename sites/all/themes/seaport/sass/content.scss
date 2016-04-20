@@ -867,8 +867,8 @@ ul.timeline li {
             }    
         }    
     }
-    .field-name-body {
-        margin-top: 25px;
+    .field-name-field-date {
+        margin-bottom: 25px;
     }
     .date-display-range {
         display: inline;
@@ -1253,6 +1253,9 @@ ul.widget-twitter {
     .submitted {
         color: #888888;
         font-size: 11px;
+    }
+    .form-item-mail {
+        margin-bottom: 10px;
     }
 }
 #comment-form {
