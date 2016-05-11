@@ -31,7 +31,9 @@ if (isset($row->field_field_instagram_handle[0]['raw']['value'])){
 	<div class="block-title">
 		<h2><span>Instagram @<?=$handle?></span></h2>
 	</div>
-	<iframe allowtransparency="true" frameborder="0" scrolling="no" src="http://widget.websta.me/in/<?=$handle?>/?s=89&amp;w=3&amp;h=4&amp;b=0&amp;p=2" style="border:none;overflow:hidden;width:273px; height: 364px"></iframe><!-- websta - web.stagram.com -->
+	<div class="instafeed grid-gallery" data-user-name="<?=$handle?>">
+    <ul></ul>
+  </div>
 </div>
 
 <?//php print $output; ?>

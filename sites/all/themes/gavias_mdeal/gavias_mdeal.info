@@ -26,6 +26,7 @@ scripts[] = vendor/jpreloader.min.js
 scripts[] = js/bootstrap.js
 scripts[] = js/imagesloader.min.js
 scripts[] = js/theme.plugins.js
+scripts[] = js/spectragram.min.js
 
 ; Features (core settings)
 features[] = 'logo'
