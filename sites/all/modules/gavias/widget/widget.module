@@ -187,12 +187,13 @@ function widget_block_view($delta = '') {
 
                 $url = 'statuses/user_timeline.json?screen_name='.$user_name.'&count='.$count ;
 				require_once("js/twitter/twitteroauth/twitteroauth/twitteroauth.php");
-				$consumerkey = "tX4whV4R54o6hQxN9IB6w";
-				$consumersecret = variable_get('consumersecret','IioHcE47vKpIFmwPFxY9BW6L6NP0IhMPxF15HiBblI');
-				$accesstoken = variable_get('accesstoken','256872626-1ZSZZXDGdlLXALzaot3a7RiJdsqRwtaHtlBEnx8o');
-				$accesstokensecret = variable_get('accesstokensecret','eJF9BWQOPJB2SgTSvI3OqQq6OIFz51HNegxoHmw5TY');
-				$connection = new TwitterOAuth($consumerkey, $consumersecret, $accesstoken, $accesstokensecret);
-				$tweets = $connection->get("https://api.twitter.com/1.1/".$url);
+
+                $consumerkey = "8gAjhFLNwYozwny1nDPMgLZaq";
+                $consumersecret = variable_get('consumersecret','V3Pjvbqfx64Xp8Bsz6O3J6s8ovW8wSicR8MQ1jHTYL3wsdz4QO');
+                $accesstoken = variable_get('accesstoken','730181877022101504-eFoMbofI1PGI1NFxcF6ZQOfsuoqntnV');
+                $accesstokensecret = variable_get('accesstokensecret','HLAykMp1L04frobeCawGuWRPe8Int2VBY2EF4GbQJywxc');
+                    $connection = new TwitterOAuth($consumerkey, $consumersecret, $accesstoken, $accesstokensecret);
+	           $tweets = $connection->get("https://api.twitter.com/1.1/".$url);
 				$block['content'] = array(
                 '#theme' => 'widget_twitter',
                 '#settings' => array(
