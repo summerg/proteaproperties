@@ -41,8 +41,10 @@ jQuery(document).ready(function($){
     
     if($('.instafeed').length){
       jQuery.fn.spectragram.accessData = {
-      accessToken: '1406933036.fedaafa.feec3d50f5194ce5b705a1f11a107e0b',
-      clientID: 'fedaafacf224447e8aef74872d3820a1'
+      accessToken: '549686280.24e1204.37f9c4c098e143dfaad3e4f027a9c9be',
+      clientID: '24e1204232744fd9906d9b2bf7ff7b6c'
+      //accessToken: '1406933036.fedaafa.feec3d50f5194ce5b705a1f11a107e0b',
+      //clientID: 'fedaafacf224447e8aef74872d3820a1'
     };
     $('.instafeed').each(function() {
         var feedID = $(this).attr('data-user-name');
