@@ -17,7 +17,7 @@
       <div class="footer-center">
          <div class="container">      
             <div class="row">
-               <?php 
+               <?php /*
                   $footer_count = 0;
                   foreach (array('first', 'second', 'third', 'four') as  $value) {
                      if(isset($page['footer_' . $value]) && $page['footer_' . $value]){
@@ -39,7 +39,19 @@
                         echo '</div>';
                      }
                   }
-               ?>
+               */?>
+              <div class="footer-4col col-lg-3 col-md-3 col-md-6 col-xs-12">
+                <?php print render($page['footer_first']); ?>
+              </div>
+              <div class="footer-4col col-lg-2 col-md-3 col-md-6 col-xs-12">
+                <?php print render($page['footer_second']); ?>
+              </div>
+              <div class="footer-4col col-lg-4 col-md-3 col-md-6 col-xs-12">
+                <?php print render($page['footer_third']); ?>
+              </div>
+              <div class="footer-4col col-lg-3 col-md-3 col-md-6 col-xs-12">
+                <?php print render($page['footer_four']); ?>
+              </div>
             </div>   
          </div>
       </div>   

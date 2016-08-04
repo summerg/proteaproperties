@@ -142,6 +142,6 @@
       </div>
     <?php } ?>
   </div>
-  <?php require(drupal_get_path('theme', 'headquarters') . '/template/page/footer.tpl.php'); ?>
+  <?php require(drupal_get_path('theme', 'seaport') . '/template/page/footer.tpl.php'); ?>
 
 </div>   
