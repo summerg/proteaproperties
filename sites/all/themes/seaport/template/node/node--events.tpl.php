@@ -107,7 +107,10 @@ $post_format = "none";
      <?php if ($display_submitted): ?>
       <div class="post-date">
         <span class="day"><?php print format_date($node->created, 'custom', 'd'); ?></span>
-        <span class="month"><?php print t(format_date($node->created, 'custom', 'M')); ?></span>
+        <span class="moyr">
+            <span class="month"><?php print t(format_date($node->created, 'custom', 'M')); ?></span>
+            <span class="year"><?php print t(format_date($node->created, 'custom', 'Y')); ?></span>
+        </span>
       </div>
     <?php endif; ?>
     <?php if ($display_submitted): ?>

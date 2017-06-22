@@ -64,4 +64,15 @@ jQuery(document).ready(function($){
         });
       }
 
+    // Owl-Jumbo
+
+    $(".owl-jumbo").owlCarousel({
+      singleItem : true,
+      autoPlay : 7000,
+      slideSpeed:  300,
+      navigation : true,
+      pagination : false,
+      addClassActive : true
+    });
+
 });
