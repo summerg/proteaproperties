@@ -54,7 +54,18 @@ jQuery(document).ready(function($){
             size: 'small'
         });
       });
-    }   
+    }
+
+  // Owl-Jumbo
+
+  $(".owl-jumbo").owlCarousel({
+    singleItem : true,
+    autoPlay : 7000,
+    slideSpeed:  300,
+    navigation : true,
+    pagination : false,
+    addClassActive : true
+  });   
 
 });
 
