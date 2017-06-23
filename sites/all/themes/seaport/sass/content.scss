@@ -1332,8 +1332,18 @@ ul.widget-twitter {
     position: relative;
     z-index: 1;
 }
-.owl-jumbo .owl-item {
-    height: 350px; 
+.owl-carousel.owl-md.gavias-slider,
+.owl-carousel.owl-md .owl-item,
+.owl-carousel.owl-md .owl-wrapper-outer {
+    background-color: rgb(204, 204, 204);
+    height: 350px;
+    @media (min-width: $screen-sm-min) {
+        height: 550px;
+    }
+}
+.owl-carousel.owl-jumbo.gavias-slider,
+.owl-carousel.owl-jumbo .owl-item,
+.owl-carousel.owl-jumbo .owl-wrapper-outer {
     @media (min-width: $screen-sm-min) {
         height: 750px;
     }
