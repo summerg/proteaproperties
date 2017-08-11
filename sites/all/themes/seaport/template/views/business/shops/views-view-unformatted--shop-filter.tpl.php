@@ -1,7 +1,7 @@
 <div class="text-center clearfix">
   <nav class="portfolio-filter center-block" style="max-width: 780px;">
     <ul class="nav nav-tabs">
-       <li><a class="active btn btn-outline" href="#" data-filter="*" onClick="ga('send', 'filter', 'shop', 'All');"><span></span><?php print t('All'); ?></a></li>
+       <li><a class="active btn btn-outline" href="#" data-filter="*" onClick="ga('send', 'event', 'filter', 'shop', 'All');"><span></span><?php print t('All'); ?></a></li>
        <?php $i=1; foreach ($rows as $id => $row): ?>
           <?php print $row; ?>
        <?php $i++; endforeach; ?>
