@@ -54,6 +54,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:image" content="/sites/headquarters/files/Headquarters-1.jpg">
+  <meta property="og:image:alt" content="The Headquarters">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="200">
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
