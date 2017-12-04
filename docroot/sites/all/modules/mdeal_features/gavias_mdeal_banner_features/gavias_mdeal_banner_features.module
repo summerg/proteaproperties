@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Gavias MDEAL Banner Features feature.
+ */
+
+include_once 'gavias_mdeal_banner_features.features.inc';

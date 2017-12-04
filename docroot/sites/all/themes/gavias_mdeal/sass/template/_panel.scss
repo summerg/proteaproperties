@@ -1,0 +1,113 @@
+/* ----------------------------------------------------
+   PANELS STYLES
+------------------------------------------------------- */
+.panels-flexible-region {
+  float: left; 
+  width: 100%;
+}
+
+.panels-flexible-row-inside {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left:  0!important; //($grid-gutter-width / 2)!important;
+  padding-right: 0!important; //($grid-gutter-width / 2)!important;
+  padding-top: 50px;
+  padding-bottom: 25px;
+  @include clearfix();
+  @media (min-width: $screen-sm-min) {
+    width: $container-sm;
+  }
+  @media (min-width: $screen-md-min) {
+    width: $container-md;
+  }
+  @media (min-width: $screen-lg-min) {
+    width: $container-lg;
+  }
+  .panels-flexible-row-inside{
+      width: 100%!important;
+  }
+}
+
+.panels-flexible-row {
+    padding: 0!important;
+    &.container{
+      margin-left:  auto!important; 
+      margin-right: auto!important;
+    }
+    &.full-width .panels-flexible-row-inside{
+    width: 100%!important;
+    > div > .panels-flexible-region {
+       padding: 0;
+    }
+  }
+  &.no-padding, &.nopadding{
+    .panels-flexible-row-inside{
+      padding-top: 0!important;
+      padding-bottom: 0!important;
+    }
+  }
+}
+
+.panels-flexible-row-inside .col-xs-1, 
+.panels-flexible-row-inside .col-sm-1, 
+.panels-flexible-row-inside .col-md-1, 
+.panels-flexible-row-inside .col-lg-1, 
+.panels-flexible-row-inside .col-xs-2, 
+.panels-flexible-row-inside .col-sm-2, 
+.panels-flexible-row-inside .col-md-2, 
+.panels-flexible-row-inside .col-lg-2, 
+.panels-flexible-row-inside .col-xs-3, 
+.panels-flexible-row-inside .col-sm-3, 
+.panels-flexible-row-inside .col-md-3, 
+.panels-flexible-row-inside .col-lg-3, 
+.panels-flexible-row-inside .col-xs-4, 
+.panels-flexible-row-inside .col-sm-4, 
+.panels-flexible-row-inside .col-md-4, 
+.panels-flexible-row-inside .col-lg-4, 
+.panels-flexible-row-inside .col-xs-5, 
+.panels-flexible-row-inside .col-sm-5, 
+.panels-flexible-row-inside .col-md-5, 
+.panels-flexible-row-inside .col-lg-5, 
+.panels-flexible-row-inside .col-xs-6, 
+.panels-flexible-row-inside .col-sm-6, 
+.panels-flexible-row-inside .col-md-6, 
+.panels-flexible-row-inside .col-lg-6, 
+.panels-flexible-row-inside .col-xs-7, 
+.panels-flexible-row-inside .col-sm-7, 
+.panels-flexible-row-inside .col-md-7, 
+.panels-flexible-row-inside .col-lg-7, 
+.panels-flexible-row-inside .col-xs-8, 
+.panels-flexible-row-inside .col-sm-8, 
+.panels-flexible-row-inside .col-md-8, 
+.panels-flexible-row-inside .col-lg-8, 
+.panels-flexible-row-inside .col-xs-9, 
+.panels-flexible-row-inside .col-sm-9, 
+.panels-flexible-row-inside .col-md-9, 
+.panels-flexible-row-inside .col-lg-9, 
+.panels-flexible-row-inside .col-xs-10, 
+.panels-flexible-row-inside .col-sm-10, 
+.panels-flexible-row-inside .col-md-10, 
+.panels-flexible-row-inside .col-lg-10, 
+.panels-flexible-row-inside .col-xs-11, 
+.panels-flexible-row-inside .col-sm-11, 
+.panels-flexible-row-inside .col-md-11, 
+.panels-flexible-row-inside .col-lg-11, 
+.panels-flexible-row-inside .col-xs-12, 
+.panels-flexible-row-inside .col-sm-12, 
+.panels-flexible-row-inside .col-md-12, 
+.panels-flexible-row-inside .col-lg-12,
+.panels-flexible-row-inside .panels-flexible-region{
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+
+}
+
+.panel-flexible .panels-flexible-region-inside {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.hidden-header .view-header {display: none;}
+.hidden-footer .view-footer {display: none;}

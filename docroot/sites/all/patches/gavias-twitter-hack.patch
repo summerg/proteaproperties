@@ -1,0 +1,76 @@
+From 810d5143369d95c77cf1f831b64d54afa0d8a5ba Mon Sep 17 00:00:00 2001
+From: Summer Greene <summer@1011i.com>
+Date: Thu, 10 Sep 2015 16:01:11 -0700
+Subject: [PATCH] Gavian widget.mod hack to change twitter user from default to bussiness
+
+---
+ sites/all/modules/gavias/widget/widget.module |   22 ++++++++++++++++------
+ 1 files changed, 16 insertions(+), 6 deletions(-)
+
+diff --git a/sites/all/modules/gavias/widget/widget.module b/sites/all/modules/gavias/widget/widget.module
+index 52fe345..10b2341 100644
+--- a/sites/all/modules/gavias/widget/widget.module
++++ b/sites/all/modules/gavias/widget/widget.module
+@@ -64,9 +64,9 @@ function widget_block_configure($delta = '') {
+                 '#description' => t('Eg: eJF9BWQOPJB2SgTSvI3OqQq6OIFz51HNegxoHmw5TY'),
+             );
+ 
+-			
++
+             break;
+-			
++
+ 		case 'widget_flickr':
+             $form['widget_flickr_id'] = array(
+                 '#type' => 'textfield',
+@@ -127,7 +127,7 @@ function widget_block_save($delta = '', $edit = array()) {
+ 			variable_set('google_plus', $edit['google_plus']);
+ 			break;
+ 		case 'widget_slideshow':
+-			break;		
++			break;
+     }
+ }
+ 
+@@ -172,9 +172,19 @@ function widget_block_view($delta = '') {
+         case 'widget_twitter':
+        		 	$user_name = variable_get('widget_twitter_username','envato');
+        		 	$count = variable_get('widget_twitter_tweets_count',2);
+-            	$block['title'] = widget_block_get_title($delta);
++            	           $block['title'] = widget_block_get_title($delta);
+            		drupal_add_js(drupal_get_path('module','widget').'/js/twitter/twitter.js');
+ 
++                if (arg(0) == 'node' && is_numeric(arg(1))) {
++                  $nid = arg(1);
++                  if ($nid) {
++                    $node = node_load($nid);
++                    if (isset($node->field_twitter_handle['und'][0]['value'])) {
++                            $user_name = $node->field_twitter_handle['und'][0]['value'];
++                    }
++                  }
++                }
++
+                 $url = 'statuses/user_timeline.json?screen_name='.$user_name.'&count='.$count ;
+ 				require_once("js/twitter/twitteroauth/twitteroauth/twitteroauth.php");
+ 				$consumerkey = "tX4whV4R54o6hQxN9IB6w";
+@@ -189,7 +199,7 @@ function widget_block_view($delta = '') {
+                     'widget_twitter_username' => variable_get('widget_twitter_username', 'envato'),
+                     'widget_twitter_tweets_count' => variable_get('widget_twitter_tweets_count', 2),
+                 ),
+-                '#list' =>  $tweets 
++                '#list' =>  $tweets
+                  );
+ 
+             break;
+@@ -218,7 +228,7 @@ function widget_block_view($delta = '') {
+ 
+ /**
+  * Implementation of hook_theme()
+- * 
++ *
+  */
+ function widget_theme($existing, $type, $theme, $path) {
+     return array(
+-- 
+1.7.1
+

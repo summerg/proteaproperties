@@ -1,0 +1,95 @@
+<?php
+
+/**
+ * @file
+ * Provides the ability to cron feed job tasks.
+ */
+
+define('FEEDS_ULTIMATE_CRON_JOB_PREFIX', 'feeds_ultimate_cron');
+define('FEEDS_ULTIMATE_CRON_IMPORT_METHOD', 'import');
+define('FEEDS_ULTIMATE_CRON_CLEAR_METHOD', 'clear');
+
+/**
+ * Implements hook_cronapi().
+ */
+function feeds_ultimate_cron_cronapi() {
+  $items = array();
+  foreach (feeds_ultimate_cron_jobs() as $job => $title) {
+    $items[$job] = array(
+      'title' => $title,
+      'callback' => 'feeds_ultimate_cron_feedjob',
+      'callback arguments' => array($job),
+      'enabled' => FALSE,
+      'settings' => array(),
+      'scheduler' => array(
+        'name' => 'crontab',
+        'crontab' => array(
+          'rules' => array('* * * * *'),
+        ),
+      ),
+      'launcher' => array(
+        'name' => 'serial',
+        'serial' => array(
+          'thread' => 'any',
+        ),
+      ),
+    );
+  }
+  return $items;
+}
+
+/**
+ * List with importers as cron jobs.
+ */
+function feeds_ultimate_cron_jobs() {
+  $jobs = & drupal_static(__FUNCTION__, array());
+  if (empty($jobs)) {
+    foreach (feeds_importer_load_all(FALSE) as $importer_id => $importer) {
+      $import_key = FEEDS_ULTIMATE_CRON_JOB_PREFIX . '_' . FEEDS_ULTIMATE_CRON_IMPORT_METHOD . '_' . $importer_id;
+      $clear_key = FEEDS_ULTIMATE_CRON_JOB_PREFIX . '_' . FEEDS_ULTIMATE_CRON_CLEAR_METHOD . '_' . $importer_id;
+      $jobs[$import_key] = t('Import: @name', array('@name' => $importer->config['name']));
+      $jobs[$clear_key] = t('Clear: @name', array('@name' => $importer->config['name']));
+    }
+  }
+  return $jobs;
+}
+
+/**
+ * Executes importer.
+ */
+function feeds_ultimate_cron_feedjob($job) {
+  $job = str_replace(FEEDS_ULTIMATE_CRON_JOB_PREFIX . '_', '', $job->name);
+  $arr = explode('_', $job);
+  if ($arr[0] == FEEDS_ULTIMATE_CRON_IMPORT_METHOD ||
+    $arr[0] == FEEDS_ULTIMATE_CRON_CLEAR_METHOD
+  ) {
+    $method = $arr[0];
+    $importer_id = str_replace($method . '_', '', $job);
+
+    // TODO: Ability to change limit.
+    $limit = 1;
+
+    $result = db_query_range('SELECT fs.id, fs.feed_nid
+      FROM {feeds_source} fs
+      WHERE fs.id = :id AND fs.source != :source
+      ORDER BY fs.imported ASC', 0, $limit, array(':id' => $importer_id, ':source' => ''));
+
+    foreach ($result as $record) {
+      if (!empty($record)) {
+        $batch = array(
+          'title' => t('Importing !feed_name', array('!feed_name' => $importer_id)),
+          'operations' => array(
+            array(
+              'feeds_batch',
+              array($method, $importer_id, $record->feed_nid),
+            ),
+          ),
+        );
+        batch_set($batch);
+        $batch = & batch_get();
+        $batch['progressive'] = FALSE;
+        batch_process();
+      }
+    }
+  }
+}

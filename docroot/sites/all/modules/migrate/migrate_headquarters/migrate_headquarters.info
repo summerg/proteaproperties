@@ -1,0 +1,17 @@
+name = "Migrate Headquarters Blog and Events"
+description = "Migrates data from the existing Headquarters Blog into the Drupal database."
+package = "Development"
+core = 7.x
+dependencies[] = taxonomy
+dependencies[] = image
+dependencies[] = comment
+dependencies[] = migrate
+;dependencies[] = list
+;dependencies[] = number
+;dependencies[] = taxonomy_creation_date
+;dependencies[] = node_reference opptional - uncomment when needed
+
+
+files[] = migrate_headquarters.module
+files[] = blog.inc
+
