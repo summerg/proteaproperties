@@ -62,7 +62,7 @@ $envs = array(
     'theheadquarters.com',
     'staging.theheadquarters.com',
     'headquarters2017.1011i.com',
-    'terramarcenterssh4o9onhbx.devcloud.acquia-sites.com',
+    'trcretail9ngpvjlmmd.devcloud.acquia-sites.com ',
     'dev.theheadquarters.com',
     'staging.theheadquarters.com'
   ),
