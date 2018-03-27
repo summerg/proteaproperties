@@ -1,0 +1,60 @@
+/*
+Error: Invalid CSS after "        font-size": expected ";", was ": 11px; "
+        on line 24 of sass/header.scss
+
+19:     .btn-default {
+20:         background-color: $theme-color;
+21:         color: #fff;
+22:         padding: 1px 10px;
+23:         border-color: rgba(255,255,255,0.1)
+24:         font-size: 11px; 
+25:         &:hover {
+26:             border-color: rgba(255,255,255,0.9)
+27:         }
+28:         &:hover, &:focus, &:active, &.active {
+29:             background-color: lighten($theme-color, 10%);
+
+Backtrace:
+sass/header.scss:24
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/scss/parser.rb:1209:in `expected'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/scss/parser.rb:1137:in `expected'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/scss/parser.rb:1132:in `tok!'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/scss/parser.rb:786:in `try_declaration'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/scss/parser.rb:1183:in `call'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/scss/parser.rb:1183:in `rethrow'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/scss/parser.rb:791:in `try_declaration'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/scss/parser.rb:720:in `declaration_or_ruleset'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/scss/parser.rb:685:in `block_child'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/scss/parser.rb:677:in `block_contents'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/scss/parser.rb:666:in `block'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/scss/parser.rb:737:in `declaration_or_ruleset'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/scss/parser.rb:685:in `block_child'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/scss/parser.rb:677:in `block_contents'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/scss/parser.rb:666:in `block'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/scss/parser.rb:660:in `ruleset'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/scss/parser.rb:684:in `block_child'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/scss/parser.rb:674:in `block_contents'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/scss/parser.rb:125:in `stylesheet'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/scss/parser.rb:41:in `parse'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/engine.rb:409:in `_to_tree'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/engine.rb:384:in `_render_with_sourcemap'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/engine.rb:301:in `render_with_sourcemap'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/plugin/compiler.rb:215:in `update_stylesheets'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/plugin/compiler.rb:209:in `each'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/plugin/compiler.rb:294:in `watch'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/plugin.rb:109:in `send'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/plugin.rb:109:in `method_missing'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/exec/sass_scss.rb:360:in `watch_or_update'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/exec/sass_scss.rb:51:in `process_result'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/exec/base.rb:52:in `parse'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/exec/base.rb:19:in `parse!'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/sass:13
+/usr/bin/sass:23:in `load'
+/usr/bin/sass:23
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"        font-size\": expected \";\", was \": 11px; \"\A         on line 24 of sass/header.scss\A \A 19:     .btn-default {\A 20:         background-color: $theme-color;\A 21:         color: #fff;\A 22:         padding: 1px 10px;\A 23:         border-color: rgba(255,255,255,0.1)\A 24:         font-size: 11px; \A 25:         &:hover {\A 26:             border-color: rgba(255,255,255,0.9)\A 27:         }\A 28:         &:hover, &:focus, &:active, &.active {\A 29:             background-color: lighten($theme-color, 10%);"; }

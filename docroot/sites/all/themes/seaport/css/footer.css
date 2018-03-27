@@ -1,0 +1,72 @@
+/*
+Error: Undefined variable: "$theme-color".
+        on line 2 of sass/footer.scss
+
+1: .after_content {
+2:   background-color: $theme-color;
+3: }
+4: 
+5: .footer {
+6:   h4 {
+7:     color: inherit;
+
+Backtrace:
+sass/footer.scss:2
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/script/tree/variable.rb:49:in `_perform'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/script/tree/node.rb:58:in `perform'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/tree/visitors/perform.rb:398:in `visit_prop'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/tree/visitors/base.rb:36:in `send'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/tree/visitors/perform.rb:162:in `visit'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/stack.rb:79:in `with_base'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/stack.rb:115:in `with_frame'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/stack.rb:79:in `with_base'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/tree/visitors/perform.rb:162:in `visit'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/tree/visitors/perform.rb:434:in `visit_rule'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/tree/visitors/perform.rb:434:in `map'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/tree/visitors/perform.rb:434:in `visit_rule'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/tree/visitors/perform.rb:432:in `visit_rule'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/tree/visitors/base.rb:36:in `send'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/tree/visitors/perform.rb:162:in `visit'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/stack.rb:79:in `with_base'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/stack.rb:115:in `with_frame'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/stack.rb:79:in `with_base'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/tree/visitors/perform.rb:162:in `visit'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/tree/visitors/base.rb:52:in `map'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/tree/visitors/perform.rb:171:in `visit_children'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/tree/visitors/base.rb:36:in `send'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/tree/visitors/perform.rb:161:in `visit'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/tree/visitors/perform.rb:10:in `send'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/tree/visitors/perform.rb:10:in `visit'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/tree/root_node.rb:36:in `css_tree'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/engine.rb:384:in `_render_with_sourcemap'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/engine.rb:301:in `render_with_sourcemap'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/plugin/compiler.rb:215:in `update_stylesheets'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/plugin/compiler.rb:209:in `each'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/plugin/compiler.rb:294:in `watch'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/plugin.rb:109:in `send'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/plugin.rb:109:in `method_missing'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/exec/sass_scss.rb:360:in `watch_or_update'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/exec/sass_scss.rb:51:in `process_result'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/exec/base.rb:52:in `parse'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/exec/base.rb:19:in `parse!'
+/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/sass:13
+/usr/bin/sass:23:in `load'
+/usr/bin/sass:23
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$theme-color\".\A         on line 2 of sass/footer.scss\A \A 1: .after_content {\A 2:   background-color: $theme-color;\A 3: }\A 4: \A 5: .footer {\A 6:   h4 {\A 7:     color: inherit;"; }
