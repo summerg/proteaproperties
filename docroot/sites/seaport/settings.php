@@ -585,11 +585,11 @@ if (file_exists('/var/www/site-php')) {
   require '/var/www/site-php/trcretail/seaport-settings.inc';
 }
 
-if (isset($_ENV['AH_SITE_ENVIRONMENT'])) {
-  switch ($_ENV['AH_SITE_ENVIRONMENT']) {
-    case 'prod':
-      // Disable Shield on prod by setting the shield_user variable to NULL
-      $conf['shield_user'] = NULL;
-      break;
-  }
-}
+// if (isset($_ENV['AH_SITE_ENVIRONMENT'])) {
+//   switch ($_ENV['AH_SITE_ENVIRONMENT']) {
+//     case 'prod':
+//       // Disable Shield on prod by setting the shield_user variable to NULL
+//       $conf['shield_user'] = NULL;
+//       break;
+//   }
+// }
