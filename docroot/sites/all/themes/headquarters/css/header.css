@@ -1,60 +1,138 @@
-/*
-Error: Invalid CSS after "        font-size": expected ";", was ": 11px; "
-        on line 24 of sass/header.scss
+#preheader {
+  background: #1D3D70;
+  color: #fff;
+  line-height: 1;
+  margin: 0;
+  padding: 6px 0;
+  text-align: center; }
+  #preheader .h5 {
+    position: relative;
+    font-size: 13px;
+    top: 1px;
+    margin: 0;
+    color: #fff; }
+    @media (max-width: 1199px) {
+      #preheader .h5 {
+        display: block;
+        margin-bottom: 5px; } }
+  #preheader .btn-default {
+    background-color: #1D3D70;
+    color: #fff;
+    padding: 1px 10px;
+    border-color: rgba(255, 255, 255, 0.1);
+    font-size: 11px; }
+    #preheader .btn-default:hover {
+      border-color: rgba(255, 255, 255, 0.9); }
+    #preheader .btn-default:hover, #preheader .btn-default:focus, #preheader .btn-default:active, #preheader .btn-default.active {
+      background-color: #275399;
+      color: #fff; }
 
-19:     .btn-default {
-20:         background-color: $theme-color;
-21:         color: #fff;
-22:         padding: 1px 10px;
-23:         border-color: rgba(255,255,255,0.1)
-24:         font-size: 11px; 
-25:         &:hover {
-26:             border-color: rgba(255,255,255,0.9)
-27:         }
-28:         &:hover, &:focus, &:active, &.active {
-29:             background-color: lighten($theme-color, 10%);
+@media (min-width: 992px) {
+  #header {
+    min-height: 80px; } }
+#header .header-main {
+  margin: auto;
+  max-width: 1200px; }
+  #header .header-main .logo {
+    padding-top: 0;
+    max-width: 207px; }
+    @media (min-width: 992px) {
+      #header .header-main .logo {
+        max-width: 238px; } }
+  #header .header-main .area-main-menu {
+    padding-right: 15px; }
+#header.gv-fixonscroll {
+  top: -100px;
+  transition: all 0.2s ease; }
+  #header.gv-fixonscroll.gv-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 70px;
+    margin-top: -5px;
+    z-index: 99;
+    background-color: white;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.4); }
+    #header.gv-fixonscroll.gv-fixed .header-fixed .tb-megamenu .nav-collapse ul.nav > li > a {
+      color: #000; }
+    #header.gv-fixonscroll.gv-fixed .header-main .logo {
+      margin-bottom: 0; }
+    #header.gv-fixonscroll.gv-fixed .tb-megamenu .nav-collapse ul.nav > li {
+      padding: 30px 0 20px; }
+    @media (max-width: 767px) {
+      #header.gv-fixonscroll.gv-fixed {
+        position: static; } }
+#header .tb-megamenu-subnav > li:last-child > a {
+  border-bottom: 0; }
 
-Backtrace:
-sass/header.scss:24
-/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/scss/parser.rb:1209:in `expected'
-/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/scss/parser.rb:1137:in `expected'
-/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/scss/parser.rb:1132:in `tok!'
-/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/scss/parser.rb:786:in `try_declaration'
-/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/scss/parser.rb:1183:in `call'
-/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/scss/parser.rb:1183:in `rethrow'
-/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/scss/parser.rb:791:in `try_declaration'
-/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/scss/parser.rb:720:in `declaration_or_ruleset'
-/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/scss/parser.rb:685:in `block_child'
-/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/scss/parser.rb:677:in `block_contents'
-/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/scss/parser.rb:666:in `block'
-/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/scss/parser.rb:737:in `declaration_or_ruleset'
-/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/scss/parser.rb:685:in `block_child'
-/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/scss/parser.rb:677:in `block_contents'
-/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/scss/parser.rb:666:in `block'
-/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/scss/parser.rb:660:in `ruleset'
-/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/scss/parser.rb:684:in `block_child'
-/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/scss/parser.rb:674:in `block_contents'
-/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/scss/parser.rb:125:in `stylesheet'
-/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/scss/parser.rb:41:in `parse'
-/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/engine.rb:409:in `_to_tree'
-/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/engine.rb:384:in `_render_with_sourcemap'
-/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/engine.rb:301:in `render_with_sourcemap'
-/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
-/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/plugin/compiler.rb:215:in `update_stylesheets'
-/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/plugin/compiler.rb:209:in `each'
-/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/plugin/compiler.rb:294:in `watch'
-/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/plugin.rb:109:in `send'
-/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/plugin.rb:109:in `method_missing'
-/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/exec/sass_scss.rb:360:in `watch_or_update'
-/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/exec/sass_scss.rb:51:in `process_result'
-/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/exec/base.rb:52:in `parse'
-/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/../lib/sass/exec/base.rb:19:in `parse!'
-/usr/lib64/ruby/gems/1.8/gems/sass-3.4.25/bin/sass:13
-/usr/bin/sass:23:in `load'
-/usr/bin/sass:23
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"        font-size\": expected \";\", was \": 11px; \"\A         on line 24 of sass/header.scss\A \A 19:     .btn-default {\A 20:         background-color: $theme-color;\A 21:         color: #fff;\A 22:         padding: 1px 10px;\A 23:         border-color: rgba(255,255,255,0.1)\A 24:         font-size: 11px; \A 25:         &:hover {\A 26:             border-color: rgba(255,255,255,0.9)\A 27:         }\A 28:         &:hover, &:focus, &:active, &.active {\A 29:             background-color: lighten($theme-color, 10%);"; }
+div.tb-megamenu .nav-collapse ul.nav > li:last-child a {
+  border-right: 0 !important; }
+div.tb-megamenu .nav-collapse ul.nav > li.active > a, div.tb-megamenu .nav-collapse ul.nav > li.active > a:focus, div.tb-megamenu .nav-collapse ul.nav > li.active > a:active, div.tb-megamenu .nav-collapse ul.nav > li.active > a:hover, div.tb-megamenu .nav-collapse ul.nav > li.open > a, div.tb-megamenu .nav-collapse ul.nav > li.open > a:focus, div.tb-megamenu .nav-collapse ul.nav > li.open > a:active, div.tb-megamenu .nav-collapse ul.nav > li.open > a:hover, div.tb-megamenu .nav-collapse ul.nav > li:focus > a, div.tb-megamenu .nav-collapse ul.nav > li:focus > a:focus, div.tb-megamenu .nav-collapse ul.nav > li:focus > a:active, div.tb-megamenu .nav-collapse ul.nav > li:focus > a:hover, div.tb-megamenu .nav-collapse ul.nav > li:hover > a, div.tb-megamenu .nav-collapse ul.nav > li:hover > a:focus, div.tb-megamenu .nav-collapse ul.nav > li:hover > a:active, div.tb-megamenu .nav-collapse ul.nav > li:hover > a:hover {
+  color: #2d5ead !important; }
+div.tb-megamenu .nav-collapse ul.nav > li.dropdown.open .active > a {
+  color: inherit !important; }
+  div.tb-megamenu .nav-collapse ul.nav > li.dropdown.open .active > a:focus, div.tb-megamenu .nav-collapse ul.nav > li.dropdown.open .active > a:active, div.tb-megamenu .nav-collapse ul.nav > li.dropdown.open .active > a:hover {
+    color: #2E69C9 !important; }
+div.tb-megamenu .nav-collapse ul.nav > li a:active, div.tb-megamenu .nav-collapse ul.nav > li a:focus, div.tb-megamenu .nav-collapse ul.nav > li a:hover {
+  color: #2E69C9 !important; }
+div.tb-megamenu .nav-collapse ul.nav > li .dropdown-menu {
+  border-color: #1D3D70; }
+div.tb-megamenu .tb-megamenu-button {
+  margin: 50% 10px 5px 0;
+  padding: 7px 10px; }
+@media (max-width: 1199px) {
+  div.tb-megamenu .nav-collapse > ul.nav > li > a {
+    padding: 0 12px; } }
+@media (max-width: 991px) {
+  div.tb-megamenu > .nav-collapse > ul.nav > li > a {
+    background: #d3effc none repeat scroll 0 center !important;
+    color: #000000 !important; } }
+
+.tb-megamenu .nav-collapse {
+  min-width: 250px;
+  right: 10px !important; }
+
+.tb-megamenu .mega.dropdown.openy > .mega-dropdown-menu {
+  display: block !important; }
+
+/* @media (max-width: 1000px) {
+  .tb-megamenu {
+      .navbar-header {
+        float: none;
+      }
+      .navbar-left,.navbar-right {
+        float: none !important;
+      }
+      .navbar-toggle {
+        display: block;
+      }
+      .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+      }
+      .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+      }
+      .navbar-collapse.collapse {
+        display: none!important;
+      }
+      .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+      }
+      .navbar-nav>li {
+        float: none;
+      }
+      .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      .collapse.in{
+        display:block !important;
+    }
+  }
+} */
+
+/*# sourceMappingURL=header.css.map */

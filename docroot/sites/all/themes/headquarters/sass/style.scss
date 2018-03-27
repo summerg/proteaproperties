@@ -7,12 +7,12 @@
 // Variables
 @import 'vars/_headq_variables.scss';
 
-// Theme 
-@import '/header.scss';
-@import '/content.scss'; 
-@import '/footer.scss';
+// Theme
+@import 'header.scss';
+@import 'content.scss';
+@import 'footer.scss';
 
-@import '/temp-content.scss';
+@import 'temp-content.scss';
 
 // Plugins
-@import '/magnific/main.scss';
+@import 'magnific/main.scss';

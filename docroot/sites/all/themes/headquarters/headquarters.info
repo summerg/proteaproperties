@@ -6,7 +6,7 @@ screenshot = screenshot.png
 base theme = gavias_mdeal
 
 ;Stylesheets
-stylesheets[all][] = sass/style.scss
+stylesheets[all][] = css/style.css
 
 ;Scripts
 scripts[] = js/jquery.magnific-popup.min.js

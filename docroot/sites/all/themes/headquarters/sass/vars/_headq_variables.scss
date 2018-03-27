@@ -1,5 +1,5 @@
 
-
+@import 'variables';
 
 // ==================================================
 // Headquarters Variables
@@ -10,7 +10,7 @@
 $theme-color             : #1D3D70; // was #1e77d1
 $theme-color-secondary   : #d3effc; // was #c9ebfc
 $theme-color-tertiary    : #1D3D70;
-$border-color            : rgba(0, 0, 0, 0.1)!default; 
+$border-color            : rgba(0, 0, 0, 0.1)!default;
 $nocolor                 : transparent !default;
 
 
@@ -29,25 +29,25 @@ $screen-md-max: ($screen-lg-min - 1);
 // ==================================================
 // Typography
 // ==================================================
-$font-family-base:        $font-family-sans-serif; 
+$font-family-base:        $font-family-sans-serif;
 
 $font-size-base:          14px !default;
 $font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
 $font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
 
-$font-size-h1:            30px !default; 
-$font-size-h2:            26px !default; 
-$font-size-h3:            20px !default; 
+$font-size-h1:            30px !default;
+$font-size-h2:            26px !default;
+$font-size-h3:            20px !default;
 $font-size-h4:            18px !default; // ~18px
 $font-size-h5:            $font-size-base !default;
 $font-size-h6:            12px !default; // ~12px
 
-/*
+
 // ==================================================
 // MDeal Variables (reference)
 // ==================================================
 
-// images folder path of theme 
+// images folder path of theme
 $base-theme-image-path : '../images/'!default;
 
 //------- FONTS
@@ -55,7 +55,7 @@ $fa-font-path             : "../fonts" !default;
 $font-icon                : "FontAwesome"!default;
 $font-second              : "brandon"!default;
 //-------- COLOR --------------
-$black                   : #000 !default; 
+$black                   : #000 !default;
 $white                   : #fff !default;
 $nocolor                 : transparent !default;
 //--------- COLORS
@@ -63,5 +63,5 @@ $theme-color-rgba          : rgba(23, 155, 178, 0.6) !default;
 $theme-color               : #179BB2!default;
 $theme-color-second        : #444444 !default;
 $border-color-dark         : rgba(255, 255, 255, 0.1)!default;
-$border-color              : rgba(0, 0, 0, 0.1)!default; 
-*/ 
+$border-color              : rgba(0, 0, 0, 0.1)!default;
+
