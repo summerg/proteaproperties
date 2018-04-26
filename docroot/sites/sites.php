@@ -64,7 +64,8 @@ $envs = array(
     'headquarters2017.1011i.com',
     'trcretail9ngpvjlmmd.devcloud.acquia-sites.com',
     'dev.theheadquarters.com',
-    'staging.theheadquarters.com'
+    'staging.theheadquarters.com',
+    'hq.seaportvillage.com'
   ),
   'seaport' => array(
     'seaport.1011i.com',
