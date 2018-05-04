@@ -61,16 +61,14 @@ DirectoryIndex index.php index.html index.htm
 <IfModule mod_rewrite.c>
   RewriteEngine on
 
-
   RewriteCond %{HTTPS} off
   RewriteCond %{HTTP:X-Forwarded-Proto} !https
-  RewriteCond %{HTTP_HOST} ^(www\.){0,1}seaportvillage.com\.com$
+  RewriteCond %{HTTP_HOST} ^(www\.){0,1}seaportvillage\.com$
   RewriteRule ^(.*)$ https://www.seaportvillage.com/$1 [R,L]
 
-
   RewriteCond %{HTTPS} off
   RewriteCond %{HTTP:X-Forwarded-Proto} !https
-  RewriteCond %{HTTP_HOST} ^(www\.){0,1}theheadquarters.com\.com$
+  RewriteCond %{HTTP_HOST} ^(www\.){0,1}theheadquarters\.com$
   RewriteRule ^(.*)$ https://www.theheadquarters.com/$1 [R,L]
 
   # Set "protossl" to "s" if we were accessed via https://.  This is used later
