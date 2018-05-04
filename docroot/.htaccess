@@ -63,7 +63,7 @@ DirectoryIndex index.php index.html index.htm
 
   RewriteCond %{HTTPS} off
   RewriteCond %{HTTP:X-Forwarded-Proto} !https
-  RewriteCond %{HTTP_HOST} ^(www\.){0,1}(seaportvillage|theheadquarters).\.com$
+  RewriteCond %{HTTP_HOST} ^(www\.){0,1}(seaportvillage|theheadquarters)\.com$
   RewriteRule ^(.*)$ https://www.$1.com/$2 [R,L]
 
 
