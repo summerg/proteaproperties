@@ -72,6 +72,7 @@ $envs = array(
     'seaport.1011i.com',
     'seaport2017.1011i.com',
     'www.seaport.com',
+    'seaport.com',
     'www.seaportvillage.com',
     'dev.seaportvillage.com',
     'stage.seaportvillage.com',
