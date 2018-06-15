@@ -66,7 +66,13 @@ $envs = array(
     'dev.theheadquarters.com',
     'staging.theheadquarters.com',
     'hq.seaportvillage.com',
-    'hqprod.seaportvillage.com'
+    'hqprod.seaportvillage.com',
+    'oldpoliceheadquarters.com',
+    'shoptheheadquarters.com',
+    'oldpolicehq.com',
+    'www.oldpoliceheadquarters.com',
+    'www.shoptheheadquarters.com',
+    'www.oldpolicehq.com',
   ),
   'seaport' => array(
     'seaport.1011i.com',
@@ -79,6 +85,7 @@ $envs = array(
     'prod.seaportvillage.com',
   ),
 );
+
 
 foreach ($envs as $env => $env_sites) {
   foreach ($env_sites as $site) {

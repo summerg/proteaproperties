@@ -61,6 +61,10 @@ DirectoryIndex index.php index.html index.htm
 <IfModule mod_rewrite.c>
   RewriteEngine on
 
+   RewriteCond %{HTTP_HOST} ^(www\.){0,1}visitseaport\.com$
+   RewriteRule ^(.*)$ https://www.seaportvillage.com/visit [R,L]
+
+
    RewriteCond %{HTTPS} off
    RewriteCond %{HTTP:X-Forwarded-Proto} !https
    RewriteCond %{HTTP_HOST} ^(www\.){0,1}seaportvillage\.com$
