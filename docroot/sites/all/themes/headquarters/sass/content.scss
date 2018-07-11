@@ -1353,6 +1353,22 @@ ul.widget-twitter {
     }
 }
 
+.captcha {
+    margin: 15px 0;
+    legend {
+        display: none;
+    }
+    .fieldset-description {
+        margin-bottom: 5px;
+    }
+    [class*="col-"] ~ & {
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        float: left;
+    }
+}
+
 // ---------------------------------
 // REFERENCE ONLY
 // ---------------------------------

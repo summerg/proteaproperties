@@ -1163,6 +1163,18 @@ ul.widget-twitter {
   -ms-transform: scale(1);
   -o-transform: scale(1); }
 
+.captcha {
+  margin: 15px 0; }
+  .captcha legend {
+    display: none; }
+  .captcha .fieldset-description {
+    margin-bottom: 5px; }
+  [class*="col-"] ~ .captcha {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    float: left; }
+
 /* .text-medium {
   font-size: 18px;
   line-height: 1.6;
