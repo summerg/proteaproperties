@@ -15,12 +15,13 @@
       </div>
     </div>
 <?php endif; ?>
-
+<?php /*
    <div id="preheader">
         <span class="h5">Visit Seaport<span class="visible-sm-inline visible-md-inline visible-lg-inline">&mdash;San Diego&rsquo;s most exciting shopping, dining and entertainment &nbsp;</span></span>
         <a href="<?php print $front_page; ?>" class="btn btn-sm btn-default"><span class="visible-sm-inline visible-md-inline visible-lg-inline">Discover </span>Seaport Village</a> 
-        <a href="http://www.theheadquarters.com" class="btn btn-sm btn-default active"><span class="visible-sm-inline visible-md-inline visible-lg-inline">Explore </span>The Headquarters at Seaport</a>
+        <a href="https://www.theheadquarters.com" class="btn btn-sm btn-default active"><span class="visible-sm-inline visible-md-inline visible-lg-inline">Explore </span>The Headquarters at Seaport</a>
    </div>
+*/ ?>
    <header id="header" <?php if(theme_get_setting('sticky_menu') == 1){echo 'class="gv-fixonscroll"';} ?>>
       <?php if (isset($page['branding'])) : ?>
          <?php print render($page['branding']); ?>
