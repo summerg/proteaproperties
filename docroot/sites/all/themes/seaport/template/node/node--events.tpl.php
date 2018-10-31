@@ -153,7 +153,18 @@ $post_format = "none";
       <?php endif; ?>
 
       <?php if(!($event_type['name'] == 'Signature')): ?>
-        <?php print render($content['field_date']); ?>
+        <?php if(isset($content['field_date_override'])): ?>
+            <div class="field field-name-field-date field-type-datetime field-label-inline clearfix">
+                <div class="field-label">Date:&nbsp;</div>
+                <div class="field-items">
+                    <div class="field-item">
+                        <?php print render($content['field_date_override']); ?> 
+                    </div>
+                </div>
+            </div>
+        <?php else: ?>
+            <?php print render($content['field_date']); ?>
+        <?php endif; ?>
       <?php endif; ?>
 
       
